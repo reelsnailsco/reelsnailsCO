@@ -43,7 +43,7 @@
 
   /* STRIP */
   .strip { background: var(--pink); padding: 0.9rem 0; overflow: hidden; }
-  .strip-inner { display: flex; gap: 4rem; white-space: nowrap; animation: marquee 20s linear infinite; }
+  .strip-inner { display: flex; gap: 4rem; white-space: nowrap; animation: marquee 6s linear infinite;}
   .strip-item { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-style: italic; letter-spacing: 0.1em; color: rgba(255,255,255,0.9); flex-shrink: 0; }
 
   /* SECTIONS */
@@ -211,7 +211,7 @@
 <body>
 
 <nav>
-  <a href="#" class="nav-logo">RÉ<span>ELS</span></a>
+ <a href="#" class="nav-logo">RÉ<span>ELS</span></a>
   <ul class="nav-links">
     <li><a href="#servicios">Servicios</a></li>
     <li><a href="#combos">Combos</a></li>
@@ -224,6 +224,12 @@
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-grain"></div>
+<div style="width:160px; height:160px; border-radius:50%; overflow:hidden; border:2px solid rgba(233,30,140,0.4); margin-bottom:2rem; box-shadow:0 0 60px rgba(233,30,140,0.3); opacity:0; animation: fadeUp 1.5s 0.1s forwards;">
+  <img src="logo.png" alt="Réels Nails Co" style="width:100%; height:100%; object-fit:cover;">
+</div>
+```
+
+
   <div class="hero-eyebrow">Bogotá · Studio Boutique · Est. 2024</div>
   <h1 class="hero-title">RÉELS<br><em>Nails Co</em></h1>
   <p class="hero-subtitle">by Johanna Reales · Atención personalizada, una cliente a la vez</p>
@@ -231,7 +237,7 @@
     <a href="https://wa.me/573166759654?text=Hola!%20Quiero%20reservar%20una%20cita%20en%20RÉELS%20💅" class="btn-primary">Agenda tu cita</a>
     <a href="#servicios" class="btn-ghost">Ver servicios</a>
   </div>
-  <div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div>
+  <div class="hero-scroll" style="bottom:1.5rem;">
 </section>
 
 <div class="strip">
@@ -272,38 +278,33 @@
   </div>
 </section>
 
-<section class="feature" id="experiencia">
-  <div class="feature-glow"></div>
+ <!-- POLICIES -->
+
+<section class="policies">
+
   <div class="container">
-    <div class="feature-inner">
-      <div class="reveal">
-        <span class="feature-badge">Experiencia Signature</span>
-        <h2 class="section-title">Réels Sleep<br><em>Spa VIP</em></h2>
-        <p class="feature-desc">La única experiencia en Bogotá donde te recuestas, cierras los ojos y sales completamente transformada. Servicio simultáneo de manos y pies en silla reclinable con protocolo spa completo.</p>
-        <ul class="feature-list">
-          <li>Servicio simultáneo manos + pies</li>
-          <li>Semipermanente manos y pies</li>
-          <li>Exfoliación + mascarilla hidratante</li>
-          <li>Aromaterapia + manta suave</li>
-          <li>Masaje cuello y hombros</li>
-          <li>Welcome drink premium personalizado</li>
-          <li>Foto final de estudio</li>
-        </ul>
-      </div>
-      <div class="feature-card reveal">
-        <div class="feature-price">$380.000</div>
-        <div class="feature-price-label">COP · precio 2026</div>
-        <div class="feature-card-divider"></div>
-        <div class="feature-detail">
-          <span>⏱ Aprox. 3 horas</span> de experiencia completa.<br><br>
-          Incluye todo el protocolo spa, bebida funcional de bienvenida y fotografía de resultado.<br><br>
-          Cupos limitados · Reserva con anticipación.
-        </div>
-        <a href="https://wa.me/573166759654?text=Hola!%20Quiero%20reservar%20el%20Sleep%20Spa%20VIP%20💅" class="btn-primary" style="display:block; text-align:center; margin-top:1.8rem;">Reservar esta experiencia</a>
-      </div>
+
+    <p class="section-label reveal">Antes de agendar</p>
+
+    <h2 class="section-title reveal">Políticas de <em>reserva</em></h2>
+
+    <div class="policies-grid">
+
+      <div class="policy-card reveal"><div class="policy-icon">💳</div><div class="policy-title">Anticipo obligatorio</div><div class="policy-amount">$30.000</div><div class="policy-desc">Para confirmar tu cita se requiere anticipo vía Nequi o transferencia.</div></div>
+
+      <div class="policy-card reveal"><div class="policy-icon">⏰</div><div class="policy-title">Cancelación sin penalidad</div><div class="policy-desc">Avisa mínimo 24 horas antes de tu cita y el anticipo se devuelve o se traslada.</div></div>
+
+      <div class="policy-card reveal"><div class="policy-icon">❌</div><div class="policy-title">No show</div><div class="policy-desc">Si no te presentas sin avisar, el anticipo no es reembolsable.</div></div>
+
+      <div class="policy-card reveal"><div class="policy-icon">🔄</div><div class="policy-title">Reagendamiento</div><div class="policy-desc">Puedes reagendar con 24h de anticipación. El anticipo se traslada a la nueva fecha.</div></div>
+
     </div>
+
   </div>
+
 </section>
+
+
 
 <!-- ═══════════════════════════ SERVICES ═══════════════════════════ -->
 <section class="services" id="servicios">
@@ -845,6 +846,39 @@
   </div>
 </section>
 
+ <section class="feature" id="experiencia">
+  <div class="feature-glow"></div>
+  <div class="container">
+    <div class="feature-inner">
+      <div class="reveal">
+        <span class="feature-badge">Experiencia Signature</span>
+        <h2 class="section-title">Réels Sleep<br><em>Spa VIP</em></h2>
+        <p class="feature-desc">La única experiencia en Bogotá donde te recuestas, cierras los ojos y sales completamente transformada. Servicio simultáneo de manos y pies en silla reclinable con protocolo spa completo.</p>
+        <ul class="feature-list">
+          <li>Servicio simultáneo manos + pies</li>
+          <li>Semipermanente manos y pies</li>
+          <li>Exfoliación + mascarilla hidratante</li>
+          <li>Aromaterapia + manta suave</li>
+          <li>Masaje cuello y hombros</li>
+          <li>Welcome drink premium personalizado</li>
+          <li>Foto final de estudio</li>
+        </ul>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-price">$380.000</div>
+        <div class="feature-price-label">COP · precio 2026</div>
+        <div class="feature-card-divider"></div>
+        <div class="feature-detail">
+          <span>⏱ Aprox. 3 horas</span> de experiencia completa.<br><br>
+          Incluye todo el protocolo spa, bebida funcional de bienvenida y fotografía de resultado.<br><br>
+          Cupos limitados · Reserva con anticipación.
+        </div>
+        <a href="https://wa.me/573166759654?text=Hola!%20Quiero%20reservar%20el%20Sleep%20Spa%20VIP%20💅" class="btn-primary" style="display:block; text-align:center; margin-top:1.8rem;">Reservar esta experiencia</a>
+      </div>
+    </div>
+  </div>
+</section>
+ 
 <!-- COMBOS -->
 <section class="combos" id="combos">
   <div class="container">
@@ -909,19 +943,7 @@
   </div>
 </section>
 
-<!-- POLICIES -->
-<section class="policies">
-  <div class="container">
-    <p class="section-label reveal">Antes de agendar</p>
-    <h2 class="section-title reveal">Políticas de <em>reserva</em></h2>
-    <div class="policies-grid">
-      <div class="policy-card reveal"><div class="policy-icon">💳</div><div class="policy-title">Anticipo obligatorio</div><div class="policy-amount">$30.000</div><div class="policy-desc">Para confirmar tu cita se requiere anticipo vía Nequi o transferencia.</div></div>
-      <div class="policy-card reveal"><div class="policy-icon">⏰</div><div class="policy-title">Cancelación sin penalidad</div><div class="policy-desc">Avisa mínimo 24 horas antes de tu cita y el anticipo se devuelve o se traslada.</div></div>
-      <div class="policy-card reveal"><div class="policy-icon">❌</div><div class="policy-title">No show</div><div class="policy-desc">Si no te presentas sin avisar, el anticipo no es reembolsable.</div></div>
-      <div class="policy-card reveal"><div class="policy-icon">🔄</div><div class="policy-title">Reagendamiento</div><div class="policy-desc">Puedes reagendar con 24h de anticipación. El anticipo se traslada a la nueva fecha.</div></div>
-    </div>
-  </div>
-</section>
+
 
 <footer>
   <div class="footer-logo">RÉ<span>ELS</span> Nails Co · by Johanna Reales</div>
