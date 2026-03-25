@@ -287,6 +287,30 @@
   .policy-amount { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--pink); font-weight: 300; margin-bottom: 0.4rem; }
   .policy-desc { font-size: 0.95rem; color: var(--gray); line-height: 1.6; }
 
+  /* PORTFOLIO */
+  .portfolio { background: var(--dark2); }
+  .portfolio-intro { color: rgba(255,255,255,0.5); font-size: 0.92rem; line-height: 1.7; max-width: 560px; margin-top: 0.8rem; }
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    margin-top: 2.5rem;
+  }
+  .portfolio-item {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+  .portfolio-item img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    display: block;
+  }
+  .portfolio-item:hover img { transform: scale(1.05); }
+
+  /* FOOTER */
+  footer { background: #080808;
 
 
   /* FOOTER */
