@@ -8,17 +8,11 @@
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-  --pink: #E91E8C;
-  --pink-light: #f563b4;
-  --pink-pale: #fde8f4;
-
-  --beige: #f9f4f7;
-  --beige-2: #fffafb;
-
-  --dark: #1a1a1a;
-  --gray: #777;
-  --white: #ffffff;
-}
+    --pink: #E91E8C; --pink-light: #f563b4; --pink-pale: #fce4f3;
+    --dark: #0e0e0e; --dark2: #1a1a1a; --gray: #888; --light: #f9f4f7; --white: #ffffff;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--dark); color: var(--white); overflow-x: hidden; }
 
   /* NAV */
   nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.4rem 3rem; background: rgba(14,14,14,0.9); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(233,30,140,0.15); }
@@ -238,29 +232,12 @@
 
   <div class="hero-eyebrow">Bogotá · Studio Boutique · Est. 2024</div>
   <h1 class="hero-title">RÉELS<br><em>Nails Co</em></h1>
- <p class="hero-subtitle">
-Uñas en estudio privado en Bogotá ✨  
-Atención personalizada, sin afán y solo para ti 💅🏽
-</p>
+  <p class="hero-subtitle">by Johanna Reales · Atención personalizada, una cliente a la vez</p>
   <div class="hero-actions">
     <a href="https://wa.me/573166759654?text=Hola!%20Quiero%20reservar%20una%20cita%20en%20RÉELS%20💅" class="btn-primary">Agenda tu cita</a>
     <a href="#servicios" class="btn-ghost">Ver servicios</a>
   </div>
   <div class="hero-scroll" style="bottom:1.5rem;">
-</section>
-
- <section class="gallery">
-  <div class="container">
-    <h2 class="section-title">Inspírate para tu próxima cita 💅🏽</h2>
-    <div class="gallery-grid">
-      <img src="uñas1.jpg">
-      <img src="uñas2.jpg">
-      <img src="uñas3.jpg">
-      <img src="uñas4.jpg">
-      <img src="uñas5.jpg">
-      <img src="uñas6.jpg">
-    </div>
-  </div>
 </section>
 
 <div class="strip">
@@ -991,7 +968,5 @@ Atención personalizada, sin afán y solo para ti 💅🏽
   }, { threshold: 0.1 });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
- <a href="https://wa.me/573166759654?text=Hola!%20Quiero%20mi%20cita%20💅🏽"
-class="whatsapp-float">💬</a>
 </body>
 </html>
