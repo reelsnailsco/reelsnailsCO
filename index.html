@@ -1185,7 +1185,46 @@
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((e, i) => { if (e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i * 60); });
   }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ✨ Glitter cursor
+document.addEventListener('mousemove', function(e) {
+  for (let i = 0; i < 3; i++) {
+    setTimeout(() => createSparkle(e.clientX, e.clientY), i * 60);
+  }
+});
+
+function createSparkle(x, y) {
+  const sparkle = document.createElement('div');
+  const size = Math.random() * 6 + 3;
+  const angle = Math.random() * 360;
+  const distance = Math.random() * 30 + 10;
+  const duration = Math.random() * 600 + 400;
+
+  sparkle.style.cssText = `
+    position: fixed;
+    left: ${x}px;
+    top: ${y}px;
+    width: ${size}px;
+    height: ${size}px;
+    pointer-events: none;
+    z-index: 9999;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 0 ${size * 2}px rgba(255,255,255,0.9), 0 0 ${size * 4}px rgba(255,220,255,0.4);
+    transform: translate(-50%, -50%);
+  `;
+
+  document.body.appendChild(sparkle);
+
+  const rad = (angle * Math.PI) / 180;
+  sparkle.animate([
+    { transform: `translate(-50%, -50%) scale(1)`, opacity: 1 },
+    { transform: `translate(calc(-50% + ${Math.cos(rad) * distance}px), calc(-50% + ${Math.sin(rad) * distance}px)) scale(0)`, opacity: 0 }
+  ], { duration, easing: 'ease-out', fill: 'forwards' });
+
+  setTimeout(() => sparkle.remove(), duration);
+}
 </script>
 </body>
 </html>
