@@ -321,6 +321,17 @@
   .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--white); }
   .footer-logo span { color: var(--pink); }
   .footer-copy { font-size: 0.72rem; color: var(--gray); }
+ .copy-btn {
+  font-size: 0.7rem;
+  background: rgba(233,30,140,0.15);
+  border: 1px solid rgba(233,30,140,0.3);
+  color: var(--pink);
+  padding: 0.3rem 0.8rem;
+  border-radius: 1rem;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+
 
   /* ANIMATIONS */
   @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
@@ -1232,6 +1243,20 @@
     document.getElementById('tab-' + name).classList.add('active');
     btn.classList.add('active');
   }
+
+ function copiar(texto, elemento) {
+  navigator.clipboard.writeText(texto).then(() => {
+    const btn = elemento.querySelector('.copy-btn');
+    btn.textContent = '✓ Copiado';
+    btn.style.background = 'rgba(233,30,140,0.4)';
+    setTimeout(() => {
+      btn.textContent = 'Copiar';
+      btn.style.background = '';
+    }, 2000);
+  });
+}
+
+ 
   function toggle(card) {
     const isOpen = card.classList.contains('open');
     card.closest('.services-grid').querySelectorAll('.svc-card').forEach(c => c.classList.remove('open'));
