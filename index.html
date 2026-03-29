@@ -438,9 +438,12 @@
 
  @media (max-width: 768px) {
     nav { padding: 1.2rem 1.5rem; }
-    .nav-links { display: none; }
-  .nav-cta { display: none; }
+  
+  
+ .nav-links { display: none; }
+.nav-cta { display: none; }
 .hamburger { display: flex; }
+
 
     .about-grid, .feature-inner { grid-template-columns: 1fr; gap: 3rem; }
     .about-stats { grid-template-columns: 1fr 1fr; }
@@ -523,7 +526,7 @@
 <body>
 
 <nav>
- <a href="#" class="nav-logo">RÉ<span>ELS</span></a>
+  <a href="#" class="nav-logo">RÉ<span>ELS</span></a>
   <ul class="nav-links">
     <li><a href="#políticas">Políticas</a></li>
     <li><a href="#servicios">Servicios</a></li>
@@ -531,22 +534,14 @@
     <li><a href="#combos">Combos</a></li>
     <li><a href="#experiencia">Experiencia</a></li>
     <li><a href="#contacto">Agendar</a></li>
-
-
   </ul>
   <a href="#contacto" class="nav-cta">Agenda tu cita</a>
-   ...
-  <a href="#contacto" class="nav-cta">Agenda tu cita</a>
-
   <button class="hamburger" id="hamburger" aria-label="Menú" onclick="toggleMenu()">
     <span></span>
     <span></span>
     <span></span>
   </button>
-
 </nav>
-
-</nav>  ← aquí cierra el nav
 
 <div class="mobile-menu" id="mobileMenu">
   <div class="mobile-menu-inner">
@@ -559,7 +554,6 @@
     <a href="#contacto" class="mobile-cta" onclick="closeMenu()">💅 Agenda tu cita</a>
   </div>
 </div>
-
 
 
 <section class="hero">
@@ -1357,7 +1351,8 @@
 <img class="floating-sticker sticker-3" src="sticker3.png" alt="" aria-hidden="true">
 
 <script>
- function toggleMenu() {
+
+function toggleMenu() {
   const menu = document.getElementById('mobileMenu');
   const btn = document.getElementById('hamburger');
   menu.classList.toggle('open');
@@ -1368,12 +1363,13 @@ function closeMenu() {
   document.getElementById('hamburger').classList.remove('open');
 }
 
-  function showTab(name, btn) {
-    document.querySelectorAll('.services-grid').forEach(g => g.classList.remove('active'));
-    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-    document.getElementById('tab-' + name).classList.add('active');
-    btn.classList.add('active');
-  }
+function showTab(name, btn) {
+  document.querySelectorAll('.services-grid').forEach(g => g.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+  btn.classList.add('active');
+}
+
 
  function copiar(texto, elemento) {
   navigator.clipboard.writeText(texto).then(() => {
