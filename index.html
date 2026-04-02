@@ -4,17 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Réels Nails Co · by Johanna Reales</title>
-<meta property="og:title" content="Réels Nails Co · by Johanna Reales">
+ <meta property="og:title" content="Réels Nails Co · by Johanna Reales">
 <meta property="og:description" content="Studio boutique en Bogotá · Atención personalizada, una cliente a la vez · Manicure, PolyGel, Acrílicas y más 💅">
 <meta property="og:image" content="https://reelsnailsco.github.io/reelsnailsCO/preview.png">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://reelsnailsco.github.io/reelsnailsCO/">
+ <meta property="og:url" content="https://reelsnailsco.github.io/reelsnailsCO/">
 <meta property="fb:app_id" content="1491555228975615">
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  :root {
+ :root {
     --pink: #E91E8C; --pink-light: #f563b4; --pink-pale: #fce4f3;
     --dark: #0e0e0e; --dark2: #1a1a1a; --gray: #888; --light: #f9f4f7; --white: #ffffff;
   }
@@ -46,7 +46,7 @@
     .feature-detail {
       color: #222222 !important;
     }
-    .tab:not(.active) {
+        .tab:not(.active) {
       border-color: rgba(0,0,0,0.2) !important;
     }
     .feature .section-title,
@@ -64,7 +64,7 @@
     .contact-note {
       color: #ffffff !important;
     }
-    .contact-method {
+       .contact-method {
       border-color: rgba(255,255,255,0.3) !important;
     }
     .policy-card {
@@ -93,37 +93,29 @@
     }
     .footer-logo, .footer-logo span, .footer-copy {
       color: #ffffff !important;
-    }
-    nav {
+    } 
+       nav {
       background: rgba(14,14,14,0.95) !important;
     }
     .nav-logo {
       color: #ffffff !important;
     }
 
-    /* ── MI HISTORIA – light mode fixes ── */
-    .historia-parrafo {
-      color: #333333 !important;
-    }
-    .historia-timeline-titulo {
-      color: #111111 !important;
-    }
-    .historia-timeline-desc {
-      color: #555555 !important;
-    }
-    .historia-seccion {
-      background: #ede6ea !important;
-    }
   }
 
+
+
+
   html { scroll-behavior: smooth; }
-  body {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 22px;
-    background: var(--dark);
-    color: var(--white);
-    overflow-x: hidden;
-  }
+  body {font-family: 'DM Sans', sans-serif;
+  font-size: 22px;
+  background: var(--dark);
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+
+
 
   /* NAV */
   nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.4rem 3rem; background: rgba(14,14,14,0.9); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(233,30,140,0.15); }
@@ -134,24 +126,102 @@
   .nav-links a:hover { color: var(--pink); }
   .nav-cta { background: var(--pink); color: white; padding: 0.6rem 1.5rem; border-radius: 2rem; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: all 0.3s; }
   .nav-cta:hover { background: var(--pink-light); transform: translateY(-1px); }
+ /* HAMBURGER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  background: rgba(233,30,140,0.12);
+  border: 2px solid var(--pink);
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 200;
+  transition: background 0.3s;
+  flex-shrink: 0;
+}
+.hamburger:hover { background: rgba(233,30,140,0.25); }
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--pink);
+  border-radius: 2px;
+  transition: all 0.35s cubic-bezier(.77,0,.18,1);
+  transform-origin: center;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-  /* HAMBURGER */
-  .hamburger { display: none; flex-direction: column; justify-content: center; align-items: center; gap: 5px; width: 44px; height: 44px; background: rgba(233,30,140,0.12); border: 2px solid var(--pink); border-radius: 10px; cursor: pointer; z-index: 200; transition: background 0.3s; flex-shrink: 0; }
-  .hamburger:hover { background: rgba(233,30,140,0.25); }
-  .hamburger span { display: block; width: 22px; height: 2px; background: var(--pink); border-radius: 2px; transition: all 0.35s cubic-bezier(.77,0,.18,1); transform-origin: center; }
-  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-  .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+/* MENÚ MÓVIL */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 150;
+  background: rgba(14,14,14,0.97);
+  backdrop-filter: blur(20px);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  pointer-events: none;
+}
+.mobile-menu.open {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+.mobile-menu-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  width: 100%;
+  padding: 2rem;
+}
+.mobile-menu a {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid rgba(233,30,140,0.1);
+  width: 100%;
+  text-align: center;
+  transition: color 0.2s;
+}
+.mobile-menu a:hover { color: var(--pink); }
+.mobile-menu .mobile-cta {
+  margin-top: 1.5rem;
+  background: var(--pink);
+  color: white !important;
+  padding: 0.9rem 2.5rem;
+  border-radius: 3rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem !important;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-bottom: none !important;
+}
+.mobile-menu-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 2rem;
+  letter-spacing: 0.2em;
+}
+.mobile-menu-logo span { color: var(--pink); }
 
-  /* MENÚ MÓVIL */
-  .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 150; background: rgba(14,14,14,0.97); backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; opacity: 0; transform: translateY(-20px); transition: opacity 0.35s ease, transform 0.35s ease; pointer-events: none; }
-  .mobile-menu.open { display: flex; opacity: 1; transform: translateY(0); pointer-events: all; }
-  .mobile-menu-inner { display: flex; flex-direction: column; align-items: center; gap: 0.3rem; width: 100%; padding: 2rem; }
-  .mobile-menu a { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: rgba(255,255,255,0.75); text-decoration: none; letter-spacing: 0.08em; padding: 0.7rem 0; border-bottom: 1px solid rgba(233,30,140,0.1); width: 100%; text-align: center; transition: color 0.2s; }
-  .mobile-menu a:hover { color: var(--pink); }
-  .mobile-menu .mobile-cta { margin-top: 1.5rem; background: var(--pink); color: white !important; padding: 0.9rem 2.5rem; border-radius: 3rem; font-family: 'DM Sans', sans-serif; font-size: 0.85rem !important; letter-spacing: 0.1em; text-transform: uppercase; border-bottom: none !important; }
-  .mobile-menu-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: rgba(255,255,255,0.4); margin-bottom: 2rem; letter-spacing: 0.2em; }
-  .mobile-menu-logo span { color: var(--pink); }
 
   /* HERO */
   .hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; position: relative; overflow: hidden; padding: 8rem 2rem 8rem; }
@@ -172,7 +242,7 @@
 
   /* STRIP */
   .strip { background: var(--pink); padding: 0.9rem 0; overflow: hidden; }
-  .strip-inner { display: flex; gap: 4rem; white-space: nowrap; animation: marquee 6s linear infinite; }
+  .strip-inner { display: flex; gap: 4rem; white-space: nowrap; animation: marquee 6s linear infinite;}
   .strip-item { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-style: italic; letter-spacing: 0.1em; color: rgba(255,255,255,0.9); flex-shrink: 0; }
 
   /* SECTIONS */
@@ -193,13 +263,6 @@
   .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 300; color: var(--pink); line-height: 1; }
   .stat-label { font-size: 1rem; color: var(--gray); margin-top: 0.5rem; }
 
-  /* MI HISTORIA */
-  .historia-seccion { background: var(--dark); }
-  .historia-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
-  .historia-parrafo { color: rgba(255,255,255,0.6); line-height: 1.9; margin-bottom: 1rem; font-size: 1.05rem; }
-  .historia-timeline-titulo { color: rgba(255,255,255,0.85); font-size: 0.9rem; font-weight: 500; margin-bottom: 0.2rem; }
-  .historia-timeline-desc { color: var(--gray); font-size: 0.82rem; line-height: 1.5; }
-
   /* FEATURE */
   .feature { background: linear-gradient(135deg, #0e0e0e 0%, #1a0a12 100%); position: relative; overflow: hidden; }
   .feature-glow { position: absolute; top: -20%; right: -10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(233,30,140,0.15) 0%, transparent 70%); pointer-events: none; }
@@ -216,35 +279,65 @@
   .feature-detail { color: rgba(255,255,255,0.55); font-size: 0.85rem; line-height: 1.7; }
   .feature-detail span { color: var(--pink); }
 
-  /* SERVICES */
+  /* ═══════════════════════════════════════
+     SERVICES — NUEVA SECCIÓN INTERACTIVA
+  ════════════════════════════════════════ */
   .services { background: var(--dark); }
   .services-intro { color: rgba(255,255,255,0.5); font-size: 0.92rem; line-height: 1.7; max-width: 560px; margin-top: 0.8rem; }
+
   .services-tabs { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 3rem 0 0.5rem; }
   .tab { padding: 0.5rem 1.3rem; border-radius: 2rem; cursor: pointer; font-size: 0.8rem; letter-spacing: 0.05em; border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.5); background: transparent; transition: all 0.25s; }
   .tab:hover { border-color: var(--pink); color: var(--pink); }
   .tab.active { background: var(--pink); border-color: var(--pink); color: white; }
+
   .tab-hint { font-size: 0.72rem; color: var(--gray); margin-bottom: 1.5rem; font-style: italic; }
   .tab-hint span { color: var(--pink); }
+
   .services-grid { display: none; }
   .services-grid.active { display: block; }
+
   .sub-heading { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--pink); margin: 2.5rem 0 0.8rem; opacity: 0.7; }
 
+  /* Accordion service cards */
   .svc-card { border-bottom: 1px solid rgba(255,255,255,0.07); overflow: hidden; }
-  .svc-header { display: flex; align-items: center; justify-content: space-between; padding: 1.1rem 0; cursor: pointer; gap: 1rem; transition: padding-left 0.25s; }
+  .svc-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.1rem 0; cursor: pointer; gap: 1rem;
+    transition: padding-left 0.25s;
+  }
   .svc-header:hover { padding-left: 0.4rem; }
   .svc-header-left { flex: 1; }
   .svc-name { font-size: 1.05rem; color: rgba(255,255,255,0.85); font-weight: 400; }
   .svc-tagline { font-size: 0.9rem; color: var(--gray); margin-top: 0.2rem; }
   .svc-header-right { display: flex; align-items: center; gap: 1.2rem; flex-shrink: 0; }
   .svc-price { font-size: 0.95rem; font-weight: 500; color: var(--pink); white-space: nowrap; }
-  .svc-chevron { width: 20px; height: 20px; border: 1px solid rgba(233,30,140,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.3s; color: var(--pink); font-size: 0.6rem; }
+  .svc-chevron {
+    width: 20px; height: 20px; border: 1px solid rgba(233,30,140,0.3); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    transition: all 0.3s; color: var(--pink); font-size: 0.6rem;
+  }
   .svc-card.open .svc-chevron { background: var(--pink); border-color: var(--pink); color: white; transform: rotate(180deg); }
-  .svc-body { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease; padding: 0; }
+
+  .svc-body {
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    padding: 0 0 0 0;
+  }
   .svc-card.open .svc-body { max-height: 400px; padding-bottom: 1.5rem; }
-  .svc-body-inner { background: rgba(233,30,140,0.04); border: 1px solid rgba(233,30,140,0.12); border-radius: 0.8rem; padding: 1.4rem 1.6rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+  .svc-body-inner {
+    background: rgba(233,30,140,0.04);
+    border: 1px solid rgba(233,30,140,0.12);
+    border-radius: 0.8rem;
+    padding: 1.4rem 1.6rem;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+  }
+  .svc-info-block { }
   .svc-info-label { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--pink); margin-bottom: 0.4rem; opacity: 0.8; }
   .svc-info-text { font-size: 0.95rem; color: rgba(255,255,255,0.65); line-height: 1.6; }
+
   .svc-info-block.full { grid-column: 1 / -1; }
+
   .svc-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.8rem; grid-column: 1 / -1; }
   .svc-tag { background: rgba(233,30,140,0.1); border: 1px solid rgba(233,30,140,0.2); color: rgba(255,255,255,0.6); font-size: 0.68rem; padding: 0.2rem 0.7rem; border-radius: 1rem; }
 
@@ -257,9 +350,11 @@
   .combo-badge { position: absolute; top: 1.2rem; right: 1.2rem; background: var(--pink); color: white; font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.25rem 0.7rem; border-radius: 1rem; }
   .combo-name { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 400; margin-bottom: 0.8rem; }
   .combo-includes { font-size: 0.95rem; color: rgba(255,255,255,0.5); line-height: 1.7; margin-bottom: 1.5rem; }
+
   .combo-footer { display: flex; align-items: flex-end; justify-content: space-between; }
   .combo-price { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: var(--pink); }
   .combo-duration { font-size: 0.88rem; color: var(--gray); }
+
 
   /* ELIXIRS */
   .elixirs { background: var(--dark); }
@@ -269,7 +364,9 @@
   .elixir-card:hover { border-color: rgba(233,30,140,0.3); transform: translateY(-3px); }
   .elixir-icon { font-size: 1.5rem; margin-bottom: 0.8rem; }
   .elixir-name { font-weight: 500; font-size: 1rem; margin-bottom: 0.4rem; }
+
   .elixir-desc { font-size: 0.92rem; color: var(--gray); line-height: 1.5; }
+
 
   /* CONTACT */
   .contact { background: linear-gradient(135deg, #0e0e0e 0%, #1a0a12 60%, #0e0e0e 100%); text-align: center; position: relative; overflow: hidden; }
@@ -280,6 +377,7 @@
   .contact-method:hover { border-color: var(--pink); color: var(--pink); transform: translateY(-2px); }
   .contact-method-icon { font-size: 1.2rem; }
   .contact-method-text { font-size: 1rem; }
+
   .contact-method-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gray); display: block; }
   .contact-note { font-size: 0.92rem; color: var(--gray); font-style: italic; }
 
@@ -295,9 +393,23 @@
   /* PORTFOLIO */
   .portfolio { background: var(--dark2); }
   .portfolio-intro { color: rgba(255,255,255,0.5); font-size: 0.92rem; line-height: 1.7; max-width: 560px; margin-top: 0.8rem; }
-  .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; margin-top: 2.5rem; }
-  .portfolio-item { aspect-ratio: 1 / 1; overflow: hidden; border-radius: 4px; }
-  .portfolio-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; display: block; }
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    margin-top: 2.5rem;
+  }
+  .portfolio-item {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+  .portfolio-item img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    display: block;
+  }
   .portfolio-item:hover img { transform: scale(1.05); }
 
   /* FOOTER */
@@ -305,7 +417,17 @@
   .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--white); }
   .footer-logo span { color: var(--pink); }
   .footer-copy { font-size: 0.72rem; color: var(--gray); }
-  .copy-btn { font-size: 0.7rem; background: rgba(233,30,140,0.15); border: 1px solid rgba(233,30,140,0.3); color: var(--pink); padding: 0.3rem 0.8rem; border-radius: 1rem; flex-shrink: 0; transition: all 0.2s; }
+ .copy-btn {
+  font-size: 0.7rem;
+  background: rgba(233,30,140,0.15);
+  border: 1px solid rgba(233,30,140,0.3);
+  color: var(--pink);
+  padding: 0.3rem 0.8rem;
+  border-radius: 1rem;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+
 
   /* ANIMATIONS */
   @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
@@ -314,31 +436,91 @@
   .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
   .reveal.visible { opacity: 1; transform: translateY(0); }
 
-  @media (max-width: 768px) {
+ @media (max-width: 768px) {
     nav { padding: 1.2rem 1.5rem; }
-    .nav-links { display: none; }
-    .nav-cta { display: none; }
-    .hamburger { display: flex; }
-    .about-grid, .feature-inner, .historia-grid { grid-template-columns: 1fr; gap: 3rem; }
+  
+  
+ .nav-links { display: none; }
+.nav-cta { display: none; }
+.hamburger { display: flex; }
+
+
+    .about-grid, .feature-inner { grid-template-columns: 1fr; gap: 3rem; }
     .about-stats { grid-template-columns: 1fr 1fr; }
     .svc-body-inner { grid-template-columns: 1fr; }
     footer { flex-direction: column; text-align: center; }
   }
+/* --- Stickers flotantes --- */
+.floating-sticker {
+  position: fixed;
+  pointer-events: none;
+  z-index: 10;
+  will-change: transform;
+  filter: drop-shadow(0 8px 24px rgba(233,30,140,0.18));
+}
+.sticker-1 {
+  width: clamp(110px, 13vw, 170px);
+  bottom: 6%;
+  left: 1.5%;
+  opacity: 0;
+  animation: stickerIn 0.8s 0.5s ease forwards, float1 6s 1.3s ease-in-out infinite;
+}
+.sticker-2 {
+  width: clamp(100px, 12vw, 155px);
+  top: 38%;
+  right: 0.8%;
+  opacity: 0;
+  animation: stickerIn 0.8s 0.9s ease forwards, float2 7.5s 1.7s ease-in-out infinite;
+}
+.sticker-3 {
+  width: clamp(95px, 11vw, 140px);
+  top: 18%;
+  left: 1%;
+  opacity: 0;
+  animation: stickerIn 0.8s 1.3s ease forwards, float3 8.5s 2.1s ease-in-out infinite;
+}
 
-  /* STICKERS */
-  .floating-sticker { position: fixed; pointer-events: none; z-index: 10; will-change: transform; filter: drop-shadow(0 8px 24px rgba(233,30,140,0.18)); }
-  .sticker-1 { width: clamp(110px, 13vw, 170px); bottom: 6%; left: 1.5%; opacity: 0; animation: stickerIn 0.8s 0.5s ease forwards, float1 6s 1.3s ease-in-out infinite; }
-  .sticker-2 { width: clamp(100px, 12vw, 155px); top: 38%; right: 0.8%; opacity: 0; animation: stickerIn 0.8s 0.9s ease forwards, float2 7.5s 1.7s ease-in-out infinite; }
-  .sticker-3 { width: clamp(95px, 11vw, 140px); top: 18%; left: 1%; opacity: 0; animation: stickerIn 0.8s 1.3s ease forwards, float3 8.5s 2.1s ease-in-out infinite; }
-  @keyframes stickerIn { from { opacity: 0; transform: scale(0.75) translateY(20px); } to { opacity: 1; } }
-  @keyframes float1 { 0% { transform: translateY(0px) translateX(0px) rotate(-4deg); } 30% { transform: translateY(-18px) translateX(6px) rotate(-2deg); } 60% { transform: translateY(-8px) translateX(-4px) rotate(-5deg); } 100% { transform: translateY(0px) translateX(0px) rotate(-4deg); } }
-  @keyframes float2 { 0% { transform: translateY(0px) translateX(0px) rotate(5deg); } 40% { transform: translateY(-22px) translateX(-8px) rotate(3deg); } 70% { transform: translateY(-10px) translateX(5px) rotate(7deg); } 100% { transform: translateY(0px) translateX(0px) rotate(5deg); } }
-  @keyframes float3 { 0% { transform: translateY(0px) translateX(0px) rotate(3deg); } 25% { transform: translateY(-14px) translateX(-6px) rotate(1deg); } 55% { transform: translateY(-20px) translateX(7px) rotate(5deg); } 80% { transform: translateY(-6px) translateX(-3px) rotate(2deg); } 100% { transform: translateY(0px) translateX(0px) rotate(3deg); } }
-  @media (max-width: 480px) {
-    .sticker-1 { width: 90px; bottom: 3%; left: 0; }
-    .sticker-2 { width: 90px; top: 40%; right: 0; }
-    .sticker-3 { width: 85px; top: 22%; left: 0; }
+@keyframes stickerIn {
+  from { opacity: 0; transform: scale(0.75) translateY(20px); }
+  to   { opacity: 1; }
+}
+@keyframes float1 {
+  0%   { transform: translateY(0px)   translateX(0px)   rotate(-4deg); }
+  30%  { transform: translateY(-18px) translateX(6px)   rotate(-2deg); }
+  60%  { transform: translateY(-8px)  translateX(-4px)  rotate(-5deg); }
+  100% { transform: translateY(0px)   translateX(0px)   rotate(-4deg); }
+}
+@keyframes float2 {
+  0%   { transform: translateY(0px)   translateX(0px)   rotate(5deg); }
+  40%  { transform: translateY(-22px) translateX(-8px)  rotate(3deg); }
+  70%  { transform: translateY(-10px) translateX(5px)   rotate(7deg); }
+  100% { transform: translateY(0px)   translateX(0px)   rotate(5deg); }
+}
+@keyframes float3 {
+  0%   { transform: translateY(0px)   translateX(0px)   rotate(3deg); }
+  25%  { transform: translateY(-14px) translateX(-6px)  rotate(1deg); }
+  55%  { transform: translateY(-20px) translateX(7px)   rotate(5deg); }
+  80%  { transform: translateY(-6px)  translateX(-3px)  rotate(2deg); }
+  100% { transform: translateY(0px)   translateX(0px)   rotate(3deg); }
+}
+@media (max-width: 480px) {
+  .sticker-1 {
+    width: 90px;
+    bottom: 3%;
+    left: 0;
   }
+  .sticker-2 {
+    width: 90px;
+    top: 40%;
+    right: 0;
+  }
+  .sticker-3 {
+    width: 85px;
+    top: 22%;
+    left: 0;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -355,7 +537,9 @@
   </ul>
   <a href="#contacto" class="nav-cta">Agenda tu cita</a>
   <button class="hamburger" id="hamburger" aria-label="Menú" onclick="toggleMenu()">
-    <span></span><span></span><span></span>
+    <span></span>
+    <span></span>
+    <span></span>
   </button>
 </nav>
 
@@ -371,23 +555,28 @@
   </div>
 </div>
 
+
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-grain"></div>
-  <div style="width:160px; height:160px; border-radius:50%; overflow:hidden; border:2px solid rgba(233,30,140,0.4); margin-bottom:2rem; box-shadow:0 0 60px rgba(233,30,140,0.3); opacity:0; animation: fadeUp 1.5s 0.1s forwards;">
-    <img src="logo.png" alt="Réels Nails Co" style="width:100%; height:100%; object-fit:cover;">
-  </div>
+<div style="width:160px; height:160px; border-radius:50%; overflow:hidden; border:2px solid rgba(233,30,140,0.4); margin-bottom:2rem; box-shadow:0 0 60px rgba(233,30,140,0.3); opacity:0; animation: fadeUp 1.5s 0.1s forwards;">
+  <img src="logo.png" alt="Réels Nails Co" style="width:100%; height:100%; object-fit:cover;">
+</div>
+
+
+
   <div class="hero-eyebrow">Bogotá · Studio Boutique · Est. 2024</div>
   <h1 class="hero-title">RÉELS<br><em>Nails Co</em></h1>
   <p class="hero-subtitle">by Johanna Reales · Atención personalizada, una cliente a la vez</p>
   <div class="hero-actions">
-    <a href="#contacto" class="btn-primary">Agenda tu cita</a>
+   <a href="#contacto" class="btn-primary">Agenda tu cita</a>
+
     <a href="#servicios" class="btn-ghost">Ver servicios</a>
   </div>
-  <div class="hero-scroll" style="bottom:2.5rem;">
-    <span>Scroll</span>
-    <div class="scroll-line"></div>
-  </div>
+ <div class="hero-scroll" style="bottom:2.5rem;">
+  <span>Scroll</span>
+  <div class="scroll-line"></div>
+</div>
 </section>
 
 <div class="strip">
@@ -428,77 +617,6 @@
   </div>
 </section>
 
-<!-- MI HISTORIA -->
-<section class="historia-seccion" style="padding: 7rem 2rem;">
-  <div class="container">
-    <div class="historia-grid">
-
-      <!-- FOTO -->
-      <div class="reveal" style="position: relative;">
-        <div style="border-radius: 2rem; overflow: hidden; aspect-ratio: 3/4; border: 1px solid rgba(233,30,140,0.25); box-shadow: 0 0 80px rgba(233,30,140,0.1);">
-          <img src="johanna.jpg" alt="Johanna Reales – RÉELS Nails Co" style="width:100%; height:100%; object-fit:cover; display:block;">
-        </div>
-        <div style="position: absolute; bottom: -1.5rem; right: -1.5rem; width: 110px; height: 110px; border: 1px solid rgba(233,30,140,0.25); border-radius: 1rem; z-index: -1;"></div>
-        <div style="position: absolute; top: -1rem; left: -1rem; background: var(--pink); color: white; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.5rem 1.2rem; border-radius: 2rem; font-family: 'DM Sans', sans-serif;">✈️ Inspirada viajando · 2018</div>
-      </div>
-
-      <!-- TEXTO -->
-      <div class="reveal">
-        <p class="section-label">La persona detrás de las uñas</p>
-        <h2 class="section-title" style="margin-bottom: 1.8rem;">Hola, soy <em>Johanna</em></h2>
-
-        <p class="historia-parrafo">
-          Estudié publicidad — pero fue un viaje al extranjero en 2018 el que cambió todo.
-          Descubrí que las uñas son un arte que cruza fronteras, culturas y lenguajes.
-          Volví con una certeza: <strong style="color: var(--pink);">quería crear eso aquí.</strong>
-        </p>
-        <p class="historia-parrafo">
-          Empecé de forma empírica, aprendiendo con cada clienta, y con el tiempo me
-          preparé técnicamente hasta dominar cada servicio que hoy ofrezco.
-          RÉELS es el resultado de años de amor propio convertido en oficio.
-        </p>
-
-        <!-- Timeline -->
-        <div style="margin-top: 2.5rem; display: flex; flex-direction: column; gap: 0;">
-
-          <div style="display: flex; gap: 1.2rem; padding-bottom: 1.6rem;">
-            <div style="display: flex; flex-direction: column; align-items: center; flex-shrink: 0;">
-              <div style="width: 38px; height: 38px; border-radius: 50%; background: rgba(233,30,140,0.15); border: 1px solid rgba(233,30,140,0.4); display: flex; align-items: center; justify-content: center; font-size: 0.62rem; color: var(--pink); font-weight: 600;">2018</div>
-              <div style="width: 1px; flex: 1; background: rgba(233,30,140,0.15); margin-top: 6px;"></div>
-            </div>
-            <div style="padding-top: 0.5rem;">
-              <p class="historia-timeline-titulo">Un viaje que lo cambió todo ✈️</p>
-              <p class="historia-timeline-desc">Inspiración en el extranjero · primeras prácticas empíricas</p>
-            </div>
-          </div>
-
-          <div style="display: flex; gap: 1.2rem; padding-bottom: 1.6rem;">
-            <div style="display: flex; flex-direction: column; align-items: center; flex-shrink: 0;">
-              <div style="width: 38px; height: 38px; border-radius: 50%; background: rgba(233,30,140,0.15); border: 1px solid rgba(233,30,140,0.4); display: flex; align-items: center; justify-content: center; font-size: 0.62rem; color: var(--pink); font-weight: 600;">2021</div>
-              <div style="width: 1px; flex: 1; background: rgba(233,30,140,0.15); margin-top: 6px;"></div>
-            </div>
-            <div style="padding-top: 0.5rem;">
-              <p class="historia-timeline-titulo">De empírica a técnica 💅</p>
-              <p class="historia-timeline-desc">Formación profesional · especialización en PolyGel y acrílico</p>
-            </div>
-          </div>
-
-          <div style="display: flex; gap: 1.2rem;">
-            <div style="display: flex; flex-direction: column; align-items: center; flex-shrink: 0;">
-              <div style="width: 38px; height: 38px; border-radius: 50%; background: var(--pink); display: flex; align-items: center; justify-content: center; font-size: 0.62rem; color: white; font-weight: 600; box-shadow: 0 0 16px rgba(233,30,140,0.5);">2024</div>
-            </div>
-            <div style="padding-top: 0.5rem;">
-              <p style="color: var(--pink); font-size: 0.9rem; font-weight: 500; margin-bottom: 0.2rem;">Nace RÉELS Nails Co ✦</p>
-              <p class="historia-timeline-desc">Studio boutique en Bogotá · atención 1:1 · experiencia completa</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- POLICIES -->
 <section class="policies" id="políticas">
   <div class="container">
@@ -530,7 +648,9 @@
   </div>
 </section>
 
-<!-- SERVICES -->
+
+
+<!-- ═══════════════════════════ SERVICES ═══════════════════════════ -->
 <section class="services" id="servicios">
   <div class="container">
     <p class="section-label reveal">Portafolio</p>
@@ -549,168 +669,528 @@
 
     <!-- MANICURE -->
     <div id="tab-manicure" class="services-grid active">
+
       <div class="svc-card" onclick="toggle(this)">
-        <div class="svc-header"><div class="svc-header-left"><div class="svc-name">Limpieza de Manos (sin esmalte)</div><div class="svc-tagline">Mantenimiento básico profesional</div></div><div class="svc-header-right"><div class="svc-price">$30.000</div><div class="svc-chevron">▾</div></div></div>
-        <div class="svc-body"><div class="svc-body-inner"><div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Limado de forma, empuje y retiro de cutículas con técnica rusa básica, hidratación de manos y aceite de cutícula. Sin esmalte de ningún tipo.</div></div><div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">30 – 40 minutos</div></div><div class="svc-info-block"><div class="svc-info-label">👩 Ideal para</div><div class="svc-info-text">Quienes prefieren uñas naturales pero cuidadas, o como base antes de otro servicio.</div></div><div class="svc-tags"><span class="svc-tag">Uña natural</span><span class="svc-tag">Sin color</span><span class="svc-tag">Mantenimiento</span></div></div></div>
+        <div class="svc-header">
+          <div class="svc-header-left">
+            <div class="svc-name">Limpieza de Manos (sin esmalte)</div>
+            <div class="svc-tagline">Mantenimiento básico profesional</div>
+          </div>
+          <div class="svc-header-right">
+            <div class="svc-price">$30.000</div>
+            <div class="svc-chevron">▾</div>
+          </div>
+        </div>
+        <div class="svc-body"><div class="svc-body-inner">
+          <div class="svc-info-block full">
+            <div class="svc-info-label">¿En qué consiste?</div>
+            <div class="svc-info-text">Limado de forma, empuje y retiro de cutículas con técnica rusa básica, hidratación de manos y aceite de cutícula. Sin esmalte de ningún tipo.</div>
+          </div>
+          <div class="svc-info-block">
+            <div class="svc-info-label">⏱ Duración</div>
+            <div class="svc-info-text">30 – 40 minutos</div>
+          </div>
+          <div class="svc-info-block">
+            <div class="svc-info-label">👩 Ideal para</div>
+            <div class="svc-info-text">Quienes prefieren uñas naturales pero cuidadas, o como base antes de otro servicio.</div>
+          </div>
+          <div class="svc-tags"><span class="svc-tag">Uña natural</span><span class="svc-tag">Sin color</span><span class="svc-tag">Mantenimiento</span></div>
+        </div></div>
       </div>
+
       <div class="svc-card" onclick="toggle(this)">
-        <div class="svc-header"><div class="svc-header-left"><div class="svc-name">Réels Classic</div><div class="svc-tagline">Semipermanente 1 tono + cutícula + hidratación</div></div><div class="svc-header-right"><div class="svc-price">$75.000</div><div class="svc-chevron">▾</div></div></div>
-        <div class="svc-body"><div class="svc-body-inner"><div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Limpieza completa de cutículas, forma a tu gusto, esmalte semipermanente en 1 tono sólido curado con lámpara LED, top coat sellador e hidratación de manos. El semipermanente dura 2–3 semanas sin despegarse ni desportillarse.</div></div><div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">1h – 1h 15min</div></div><div class="svc-info-block"><div class="svc-info-label">👩 Ideal para</div><div class="svc-info-text">Quienes quieren color duradero sin extensiones. Perfecto para uñas naturales que ya tienen buena longitud.</div></div><div class="svc-tags"><span class="svc-tag">Uña natural</span><span class="svc-tag">2-3 semanas duración</span><span class="svc-tag">Más pedido</span></div></div></div>
+        <div class="svc-header">
+          <div class="svc-header-left">
+            <div class="svc-name">Réels Classic</div>
+            <div class="svc-tagline">Semipermanente 1 tono + cutícula + hidratación</div>
+          </div>
+          <div class="svc-header-right">
+            <div class="svc-price">$75.000</div>
+            <div class="svc-chevron">▾</div>
+          </div>
+        </div>
+        <div class="svc-body"><div class="svc-body-inner">
+          <div class="svc-info-block full">
+            <div class="svc-info-label">¿En qué consiste?</div>
+            <div class="svc-info-text">Limpieza completa de cutículas, forma a tu gusto, esmalte semipermanente en 1 tono sólido curado con lámpara LED, top coat sellador e hidratación de manos. El semipermanente dura 2–3 semanas sin despegarse ni desportillarse.</div>
+          </div>
+          <div class="svc-info-block">
+            <div class="svc-info-label">⏱ Duración</div>
+            <div class="svc-info-text">1h – 1h 15min</div>
+          </div>
+          <div class="svc-info-block">
+            <div class="svc-info-label">👩 Ideal para</div>
+            <div class="svc-info-text">Quienes quieren color duradero sin extensiones. Perfecto para uñas naturales que ya tienen buena longitud.</div>
+          </div>
+          <div class="svc-tags"><span class="svc-tag">Uña natural</span><span class="svc-tag">2-3 semanas duración</span><span class="svc-tag">Más pedido</span></div>
+        </div></div>
       </div>
+
       <div class="svc-card" onclick="toggle(this)">
-        <div class="svc-header"><div class="svc-header-left"><div class="svc-name">Réels Manicure Ruso</div><div class="svc-tagline">Técnica rusa profunda</div></div><div class="svc-header-right"><div class="svc-price">$80.000</div><div class="svc-chevron">▾</div></div></div>
-        <div class="svc-body"><div class="svc-body-inner"><div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">La manicura rusa es la técnica más precisa para el trabajo de cutículas. Usa torno eléctrico en vez de empujador manual, lo que permite limpiar más profundo alrededor del nacimiento de la uña. El resultado: una zona perfectamente limpia que hace que el esmalte luzca mucho más prolijo y dure más tiempo adherido.</div></div><div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">1h 15min – 1h 30min</div></div><div class="svc-info-block"><div class="svc-info-label">👩 Ideal para</div><div class="svc-info-text">Quienes tienen cutículas abundantes, piel seca alrededor de la uña, o buscan el acabado más impecable posible.</div></div><div class="svc-tags"><span class="svc-tag">Torno eléctrico</span><span class="svc-tag">Mayor precisión</span><span class="svc-tag">Incluye semi</span></div></div></div>
+        <div class="svc-header">
+          <div class="svc-header-left">
+            <div class="svc-name">Réels Manicure Ruso</div>
+            <div class="svc-tagline">Técnica rusa profunda</div>
+          </div>
+          <div class="svc-header-right">
+            <div class="svc-price">$80.000</div>
+            <div class="svc-chevron">▾</div>
+          </div>
+        </div>
+        <div class="svc-body"><div class="svc-body-inner">
+          <div class="svc-info-block full">
+            <div class="svc-info-label">¿En qué consiste?</div>
+            <div class="svc-info-text">La manicura rusa es la técnica más precisa para el trabajo de cutículas. Usa torno eléctrico en vez de empujador manual, lo que permite limpiar más profundo alrededor del nacimiento de la uña. El resultado: una zona perfectamente limpia que hace que el esmalte luzca mucho más prolijo y dure más tiempo adherido.</div>
+          </div>
+          <div class="svc-info-block">
+            <div class="svc-info-label">⏱ Duración</div>
+            <div class="svc-info-text">1h 15min – 1h 30min</div>
+          </div>
+          <div class="svc-info-block">
+            <div class="svc-info-label">👩 Ideal para</div>
+            <div class="svc-info-text">Quienes tienen cutículas abundantes, piel seca alrededor de la uña, o buscan el acabado más impecable posible.</div>
+          </div>
+          <div class="svc-tags"><span class="svc-tag">Torno eléctrico</span><span class="svc-tag">Mayor precisión</span><span class="svc-tag">Incluye semi</span></div>
+        </div></div>
       </div>
+
       <div class="svc-card" onclick="toggle(this)">
-        <div class="svc-header"><div class="svc-header-left"><div class="svc-name">Réels Rubber</div><div class="svc-tagline">Base rubber + semipermanente de máxima resistencia</div></div><div class="svc-header-right"><div class="svc-price">$85.000</div><div class="svc-chevron">▾</div></div></div>
-        <div class="svc-body"><div class="svc-body-inner"><div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">El "rubber" (caucho) es una base especial de consistencia más gruesa que el base coat normal. Rellena micro imperfecciones de la uña natural, la fortifica y crea una superficie perfecta para el semipermanente. El resultado es más duración (hasta 3–4 semanas) y menos riesgo de que se levante en los bordes.</div></div><div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">1h 15min – 1h 30min</div></div><div class="svc-info-block"><div class="svc-info-label">👩 Ideal para</div><div class="svc-info-text">Quienes tienen uñas frágiles, onduladas o que les dura poco el esmalte. También para quienes trabajan mucho con las manos.</div></div><div class="svc-tags"><span class="svc-tag">Máxima duración</span><span class="svc-tag">Uña frágil</span><span class="svc-tag">3-4 semanas</span></div></div></div>
+        <div class="svc-header">
+          <div class="svc-header-left">
+            <div class="svc-name">Réels Rubber</div>
+            <div class="svc-tagline">Base rubber + semipermanente de máxima resistencia</div>
+          </div>
+          <div class="svc-header-right">
+            <div class="svc-price">$85.000</div>
+            <div class="svc-chevron">▾</div>
+          </div>
+        </div>
+        <div class="svc-body"><div class="svc-body-inner">
+          <div class="svc-info-block full">
+            <div class="svc-info-label">¿En qué consiste?</div>
+            <div class="svc-info-text">El "rubber" (caucho) es una base especial de consistencia más gruesa que el base coat normal. Rellena micro imperfecciones de la uña natural, la fortifica y crea una superficie perfecta para el semipermanente. El resultado es más duración (hasta 3–4 semanas) y menos riesgo de que se levante en los bordes.</div>
+          </div>
+          <div class="svc-info-block">
+            <div class="svc-info-label">⏱ Duración</div>
+            <div class="svc-info-text">1h 15min – 1h 30min</div>
+          </div>
+          <div class="svc-info-block">
+            <div class="svc-info-label">👩 Ideal para</div>
+            <div class="svc-info-text">Quienes tienen uñas frágiles, onduladas o que les dura poco el esmalte. También para quienes trabajan mucho con las manos.</div>
+          </div>
+          <div class="svc-tags"><span class="svc-tag">Máxima duración</span><span class="svc-tag">Uña frágil</span><span class="svc-tag">3-4 semanas</span></div>
+        </div></div>
       </div>
+
       <div class="svc-card" onclick="toggle(this)">
-        <div class="svc-header"><div class="svc-header-left"><div class="svc-name">Réels Dip Power</div><div class="svc-tagline">Polvo de inmersión · acabado natural</div></div><div class="svc-header-right"><div class="svc-price">$80.000</div><div class="svc-chevron">▾</div></div></div>
-        <div class="svc-body"><div class="svc-body-inner"><div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">El Dipping Powder (inmersión en polvo) es una técnica donde se sumergen las uñas en polvo de color, capa por capa, sin necesidad de lámpara LED. El resultado es una uña más fuerte que el semipermanente pero más ligera que el acrílico, con un acabado muy natural. No daña la uña con calor de la lámpara y se retira fácilmente.</div></div><div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">1h 15min – 1h 30min</div></div><div class="svc-info-block"><div class="svc-info-label">👩 Ideal para</div><div class="svc-info-text">Quienes buscan más fortaleza que el semi pero no quieren extensiones. Excelente para uñas que se quiebran fácil.</div></div><div class="svc-tags"><span class="svc-tag">Sin lámpara</span><span class="svc-tag">Fortalece la uña</span><span class="svc-tag">Acabado natural</span></div></div></div>
+        <div class="svc-header">
+          <div class="svc-header-left">
+            <div class="svc-name">Réels Dip Power</div>
+            <div class="svc-tagline">Polvo de inmersión · acabado natural</div>
+          </div>
+          <div class="svc-header-right">
+            <div class="svc-price">$80.000</div>
+            <div class="svc-chevron">▾</div>
+          </div>
+        </div>
+        <div class="svc-body"><div class="svc-body-inner">
+          <div class="svc-info-block full">
+            <div class="svc-info-label">¿En qué consiste?</div>
+            <div class="svc-info-text">El Dipping Powder (inmersión en polvo) es una técnica donde se sumergen las uñas en polvo de color, capa por capa, sin necesidad de lámpara LED. El resultado es una uña más fuerte que el semipermanente pero más ligera que el acrílico, con un acabado muy natural. No daña la uña con calor de la lámpara y se retira fácilmente.</div>
+          </div>
+          <div class="svc-info-block">
+            <div class="svc-info-label">⏱ Duración</div>
+            <div class="svc-info-text">1h 15min – 1h 30min</div>
+          </div>
+          <div class="svc-info-block">
+            <div class="svc-info-label">👩 Ideal para</div>
+            <div class="svc-info-text">Quienes buscan más fortaleza que el semi pero no quieren extensiones. Excelente para uñas que se quiebran fácil.</div>
+          </div>
+          <div class="svc-tags"><span class="svc-tag">Sin lámpara</span><span class="svc-tag">Fortalece la uña</span><span class="svc-tag">Acabado natural</span></div>
+        </div></div>
       </div>
+
       <div class="svc-card" onclick="toggle(this)">
-        <div class="svc-header"><div class="svc-header-left"><div class="svc-name">Manicure Semi Express</div><div class="svc-tagline">1 tono sólido · también para caballeros</div></div><div class="svc-header-right"><div class="svc-price">$65.000</div><div class="svc-chevron">▾</div></div></div>
-        <div class="svc-body"><div class="svc-body-inner"><div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Versión rápida del semipermanente: limado de forma, empuje básico de cutículas y aplicación de semipermanente en 1 tono. Sin técnica rusa profunda. También disponible en tonos neutros para caballeros que quieren uñas cuidadas con acabado discreto.</div></div><div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">45 – 60 minutos</div></div><div class="svc-info-block"><div class="svc-info-label">👩 Ideal para</div><div class="svc-info-text">Quienes tienen poco tiempo o ya tienen las cutículas en buen estado. Ideal también para caballeros.</div></div><div class="svc-tags"><span class="svc-tag">Rápido</span><span class="svc-tag">Caballeros</span><span class="svc-tag">1 tono</span></div></div></div>
+        <div class="svc-header">
+          <div class="svc-header-left">
+            <div class="svc-name">Manicure Semi Express</div>
+            <div class="svc-tagline">1 tono sólido · también para caballeros</div>
+          </div>
+          <div class="svc-header-right">
+            <div class="svc-price">$65.000</div>
+            <div class="svc-chevron">▾</div>
+          </div>
+        </div>
+        <div class="svc-body"><div class="svc-body-inner">
+          <div class="svc-info-block full">
+            <div class="svc-info-label">¿En qué consiste?</div>
+            <div class="svc-info-text">Versión rápida del semipermanente: limado de forma, empuje básico de cutículas y aplicación de semipermanente en 1 tono. Sin técnica rusa profunda. También disponible en tonos neutros para caballeros que quieren uñas cuidadas con acabado discreto.</div>
+          </div>
+          <div class="svc-info-block">
+            <div class="svc-info-label">⏱ Duración</div>
+            <div class="svc-info-text">45 – 60 minutos</div>
+          </div>
+          <div class="svc-info-block">
+            <div class="svc-info-label">👩 Ideal para</div>
+            <div class="svc-info-text">Quienes tienen poco tiempo o ya tienen las cutículas en buen estado. Ideal también para caballeros.</div>
+          </div>
+          <div class="svc-tags"><span class="svc-tag">Rápido</span><span class="svc-tag">Caballeros</span><span class="svc-tag">1 tono</span></div>
+        </div></div>
       </div>
+
       <div class="sub-heading">Retiros</div>
+
       <div class="svc-card" onclick="toggle(this)">
-        <div class="svc-header"><div class="svc-header-left"><div class="svc-name">Retiro Semi (sin manicure)</div></div><div class="svc-header-right"><div class="svc-price">$15.000</div><div class="svc-chevron">▾</div></div></div>
-        <div class="svc-body"><div class="svc-body-inner"><div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Retiro seguro del semipermanente con técnica de papel aluminio + acetona especializada. Se cuida que la uña natural no se desgaste ni se dañe. Sin manicure posterior.</div></div><div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">20 – 30 minutos</div></div><div class="svc-info-block"><div class="svc-info-label">⚠️ Importante</div><div class="svc-info-text">No retires el semi en casa raspando — dañas la capa de queratina de tu uña.</div></div></div></div>
+        <div class="svc-header">
+          <div class="svc-header-left"><div class="svc-name">Retiro Semi (sin manicure)</div></div>
+          <div class="svc-header-right"><div class="svc-price">$15.000</div><div class="svc-chevron">▾</div></div>
+        </div>
+        <div class="svc-body"><div class="svc-body-inner">
+          <div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Retiro seguro del semipermanente con técnica de papel aluminio + acetona especializada. Se cuida que la uña natural no se desgaste ni se dañe. Sin manicure posterior.</div></div>
+          <div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">20 – 30 minutos</div></div>
+          <div class="svc-info-block"><div class="svc-info-label">⚠️ Importante</div><div class="svc-info-text">No retires el semi en casa raspando — dañas la capa de queratina de tu uña.</div></div>
+        </div></div>
       </div>
+
       <div class="svc-card" onclick="toggle(this)">
-        <div class="svc-header"><div class="svc-header-left"><div class="svc-name">Retiro Semi (con manicure incluida)</div></div><div class="svc-header-right"><div class="svc-price">$10.000</div><div class="svc-chevron">▾</div></div></div>
-        <div class="svc-body"><div class="svc-body-inner"><div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Precio del retiro cuando lo combinas con cualquier otra manicure en la misma cita. Sale más económico porque ya está incluido en el tiempo de la sesión.</div></div><div class="svc-info-block"><div class="svc-info-label">💡 Consejo</div><div class="svc-info-text">Si vas a cambiarte de servicio, pide el retiro incluido — ahorras $5.000.</div></div></div></div>
+        <div class="svc-header">
+          <div class="svc-header-left"><div class="svc-name">Retiro Semi (con manicure incluida)</div></div>
+          <div class="svc-header-right"><div class="svc-price">$10.000</div><div class="svc-chevron">▾</div></div>
+        </div>
+        <div class="svc-body"><div class="svc-body-inner">
+          <div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Precio del retiro cuando lo combinas con cualquier otra manicure en la misma cita. Sale más económico porque ya está incluido en el tiempo de la sesión.</div></div>
+          <div class="svc-info-block"><div class="svc-info-label">💡 Consejo</div><div class="svc-info-text">Si vas a cambiarte de servicio, pide el retiro incluido — ahorras $5.000.</div></div>
+        </div></div>
       </div>
     </div>
 
     <!-- PRESS ON -->
     <div id="tab-press" class="services-grid">
+
       <div class="svc-card" onclick="toggle(this)">
-        <div class="svc-header"><div class="svc-header-left"><div class="svc-name">Press On — ¿Qué es?</div><div class="svc-tagline">Extensiones removibles sin daño</div></div><div class="svc-header-right"><div class="svc-price">ℹ️</div><div class="svc-chevron">▾</div></div></div>
-        <div class="svc-body"><div class="svc-body-inner"><div class="svc-info-block full"><div class="svc-info-label">¿Qué son las Press On?</div><div class="svc-info-text">Las uñas Press On son extensiones prefabricadas que se adhieren sobre tu uña natural con pegamento especializado o gel. Son 100% removibles en casa con acetona o aceite, sin dañar tu uña natural. Permiten cambiar de look en minutos y son perfectas para eventos, viajes o quienes no pueden tener uñas largas permanentes por trabajo.</div></div><div class="svc-tags"><span class="svc-tag">Sin daño</span><span class="svc-tag">Removibles en casa</span><span class="svc-tag">Ideal para eventos</span><span class="svc-tag">Cambio rápido de look</span></div></div></div>
+        <div class="svc-header">
+          <div class="svc-header-left">
+            <div class="svc-name">Press On — ¿Qué es?</div>
+            <div class="svc-tagline">Extensiones removibles sin daño</div>
+          </div>
+          <div class="svc-header-right"><div class="svc-price">ℹ️</div><div class="svc-chevron">▾</div></div>
+        </div>
+        <div class="svc-body"><div class="svc-body-inner">
+          <div class="svc-info-block full">
+            <div class="svc-info-label">¿Qué son las Press On?</div>
+            <div class="svc-info-text">Las uñas Press On son extensiones prefabricadas que se adhieren sobre tu uña natural con pegamento especializado o gel. Son 100% removibles en casa con acetona o aceite, sin dañar tu uña natural. Permiten cambiar de look en minutos y son perfectas para eventos, viajes o quienes no pueden tener uñas largas permanentes por trabajo.</div>
+          </div>
+          <div class="svc-tags"><span class="svc-tag">Sin daño</span><span class="svc-tag">Removibles en casa</span><span class="svc-tag">Ideal para eventos</span><span class="svc-tag">Cambio rápido de look</span></div>
+        </div></div>
       </div>
+
       <div class="svc-card" onclick="toggle(this)">
-        <div class="svc-header"><div class="svc-header-left"><div class="svc-name">Press On — Juego completo</div><div class="svc-tagline">Las 10 uñas · diseño incluido</div></div><div class="svc-header-right"><div class="svc-price">$95.000</div><div class="svc-chevron">▾</div></div></div>
-        <div class="svc-body"><div class="svc-body-inner"><div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Medición personalizada de tus 10 uñas, preparación de la superficie, aplicación con gel o pegamento, limado y sellado. Incluye el diseño que elijas del catálogo o uno personalizado.</div></div><div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">1h – 1h 15min</div></div><div class="svc-info-block"><div class="svc-info-label">⏳ Duración del resultado</div><div class="svc-info-text">1–3 semanas según el cuidado y actividad diaria.</div></div></div></div>
+        <div class="svc-header">
+          <div class="svc-header-left"><div class="svc-name">Press On — Juego completo</div><div class="svc-tagline">Las 10 uñas · diseño incluido</div></div>
+          <div class="svc-header-right"><div class="svc-price">$95.000</div><div class="svc-chevron">▾</div></div>
+        </div>
+        <div class="svc-body"><div class="svc-body-inner">
+          <div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Medición personalizada de tus 10 uñas, preparación de la superficie, aplicación con gel o pegamento, limado y sellado. Incluye el diseño que elijas del catálogo o uno personalizado.</div></div>
+          <div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">1h – 1h 15min</div></div>
+          <div class="svc-info-block"><div class="svc-info-label">⏳ Duración del resultado</div><div class="svc-info-text">1–3 semanas según el cuidado y actividad diaria.</div></div>
+        </div></div>
       </div>
+
       <div class="svc-card" onclick="toggle(this)">
-        <div class="svc-header"><div class="svc-header-left"><div class="svc-name">Retoque Press On</div><div class="svc-tagline">Reparar las que se levantaron</div></div><div class="svc-header-right"><div class="svc-price">$70.000</div><div class="svc-chevron">▾</div></div></div>
-        <div class="svc-body"><div class="svc-body-inner"><div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Re-adhesión y ajuste de varias uñas que se levantaron, retiro de las dañadas y reposición. Incluye limado y acabado general.</div></div><div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">45 – 60 minutos</div></div></div></div>
+        <div class="svc-header">
+          <div class="svc-header-left"><div class="svc-name">Retoque Press On</div><div class="svc-tagline">Reparar las que se levantaron</div></div>
+          <div class="svc-header-right"><div class="svc-price">$70.000</div><div class="svc-chevron">▾</div></div>
+        </div>
+        <div class="svc-body"><div class="svc-body-inner">
+          <div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Re-adhesión y ajuste de varias uñas que se levantaron, retiro de las dañadas y reposición. Incluye limado y acabado general.</div></div>
+          <div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">45 – 60 minutos</div></div>
+        </div></div>
       </div>
+
       <div class="svc-card" onclick="toggle(this)">
-        <div class="svc-header"><div class="svc-header-left"><div class="svc-name">Uña Press On Individual</div></div><div class="svc-header-right"><div class="svc-price">$10.000</div><div class="svc-chevron">▾</div></div></div>
-        <div class="svc-body"><div class="svc-body-inner"><div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Reposición de 1 sola uña Press On que se cayó o dañó. Se usa el mismo molde del juego original para que el diseño combine.</div></div><div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">10 – 15 minutos</div></div></div></div>
+        <div class="svc-header">
+          <div class="svc-header-left"><div class="svc-name">Uña Press On Individual</div></div>
+          <div class="svc-header-right"><div class="svc-price">$10.000</div><div class="svc-chevron">▾</div></div>
+        </div>
+        <div class="svc-body"><div class="svc-body-inner">
+          <div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Reposición de 1 sola uña Press On que se cayó o dañó. Se usa el mismo molde del juego original para que el diseño combine.</div></div>
+          <div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">10 – 15 minutos</div></div>
+        </div></div>
       </div>
+
       <div class="svc-card" onclick="toggle(this)">
-        <div class="svc-header"><div class="svc-header-left"><div class="svc-name">Retiro Press On Total</div></div><div class="svc-header-right"><div class="svc-price">$25.000</div><div class="svc-chevron">▾</div></div></div>
-        <div class="svc-body"><div class="svc-body-inner"><div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Retiro seguro de todo el juego con acetona y técnica de inmersión controlada, limpieza de residuos de pegamento e hidratación de uña natural.</div></div><div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">20 – 30 minutos</div></div></div></div>
+        <div class="svc-header">
+          <div class="svc-header-left"><div class="svc-name">Retiro Press On Total</div></div>
+          <div class="svc-header-right"><div class="svc-price">$25.000</div><div class="svc-chevron">▾</div></div>
+        </div>
+        <div class="svc-body"><div class="svc-body-inner">
+          <div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Retiro seguro de todo el juego con acetona y técnica de inmersión controlada, limpieza de residuos de pegamento e hidratación de uña natural.</div></div>
+          <div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">20 – 30 minutos</div></div>
+        </div></div>
       </div>
+
       <div class="svc-card" onclick="toggle(this)">
-        <div class="svc-header"><div class="svc-header-left"><div class="svc-name">Retiro Press On (con nueva montura)</div></div><div class="svc-header-right"><div class="svc-price">$10.000</div><div class="svc-chevron">▾</div></div></div>
-        <div class="svc-body"><div class="svc-body-inner"><div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Precio del retiro cuando inmediatamente se hace un nuevo juego en la misma cita. Sale más económico que pagarlo por separado.</div></div></div></div>
+        <div class="svc-header">
+          <div class="svc-header-left"><div class="svc-name">Retiro Press On (con nueva montura)</div></div>
+          <div class="svc-header-right"><div class="svc-price">$10.000</div><div class="svc-chevron">▾</div></div>
+        </div>
+        <div class="svc-body"><div class="svc-body-inner">
+          <div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Precio del retiro cuando inmediatamente se hace un nuevo juego en la misma cita. Sale más económico que pagarlo por separado.</div></div>
+        </div></div>
       </div>
     </div>
 
     <!-- ACRÍLICAS -->
     <div id="tab-acrilicas" class="services-grid">
+
       <div class="svc-card" onclick="toggle(this)">
-        <div class="svc-header"><div class="svc-header-left"><div class="svc-name">¿Qué son las Acrílicas?</div><div class="svc-tagline">Extensiones esculpidas · máxima dureza</div></div><div class="svc-header-right"><div class="svc-price">ℹ️</div><div class="svc-chevron">▾</div></div></div>
-        <div class="svc-body"><div class="svc-body-inner"><div class="svc-info-block full"><div class="svc-info-label">¿Qué es el acrílico?</div><div class="svc-info-text">El acrílico es una mezcla de polvo y líquido que forma una masa moldeable que se endurece al aire. Es el material más resistente para extensiones de uñas. Ideal para largas duraciones y quienes necesitan uñas muy fuertes. El "Baño en Acrílico" no es extensión — es una capa delgada que se aplica sobre la uña natural o la extensión para darle brillo y protección.</div></div><div class="svc-tags"><span class="svc-tag">Máxima dureza</span><span class="svc-tag">Larga duración</span><span class="svc-tag">Extensión o cobertura</span></div></div></div>
+        <div class="svc-header">
+          <div class="svc-header-left"><div class="svc-name">¿Qué son las Acrílicas?</div><div class="svc-tagline">Extensiones esculpidas · máxima dureza</div></div>
+          <div class="svc-header-right"><div class="svc-price">ℹ️</div><div class="svc-chevron">▾</div></div>
+        </div>
+        <div class="svc-body"><div class="svc-body-inner">
+          <div class="svc-info-block full"><div class="svc-info-label">¿Qué es el acrílico?</div><div class="svc-info-text">El acrílico es una mezcla de polvo y líquido que forma una masa moldeable que se endurece al aire. Es el material más resistente para extensiones de uñas. Ideal para largas duraciones y quienes necesitan uñas muy fuertes. El "Baño en Acrílico" no es extensión — es una capa delgada que se aplica sobre la uña natural o la extensión para darle brillo y protección.</div></div>
+          <div class="svc-tags"><span class="svc-tag">Máxima dureza</span><span class="svc-tag">Larga duración</span><span class="svc-tag">Extensión o cobertura</span></div>
+        </div></div>
       </div>
+
       <div class="sub-heading">Esculpidas — Extensión completa</div>
+
       <div class="svc-card" onclick="toggle(this)">
-        <div class="svc-header"><div class="svc-header-left"><div class="svc-name">Acrílicas Esculpidas</div><div class="svc-tagline">Extensión desde cero · esculpida a mano</div></div><div class="svc-header-right"><div class="svc-price">$150.000</div><div class="svc-chevron">▾</div></div></div>
-        <div class="svc-body"><div class="svc-body-inner"><div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Se prepara la uña natural, se aplica una punta plástica o molde de papel para definir la longitud, y se esculpe el acrílico encima para crear la extensión. Se lima, da forma personalizada y se aplica el diseño que elijas. El resultado son uñas largas, fuertes y con la forma exacta que quieres.</div></div><div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">2h – 2h 30min</div></div><div class="svc-info-block"><div class="svc-info-label">⏳ Duración resultado</div><div class="svc-info-text">3–4 semanas con mantenimiento</div></div><div class="svc-tags"><span class="svc-tag">Extensión completa</span><span class="svc-tag">Forma personalizada</span><span class="svc-tag">Ultra resistente</span></div></div></div>
+        <div class="svc-header">
+          <div class="svc-header-left"><div class="svc-name">Acrílicas Esculpidas</div><div class="svc-tagline">Extensión desde cero · esculpida a mano</div></div>
+          <div class="svc-header-right"><div class="svc-price">$150.000</div><div class="svc-chevron">▾</div></div>
+        </div>
+        <div class="svc-body"><div class="svc-body-inner">
+          <div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Se prepara la uña natural, se aplica una punta plástica o molde de papel para definir la longitud, y se esculpe el acrílico encima para crear la extensión. Se lima, da forma personalizada y se aplica el diseño que elijas (incluyendo semipermanente, chrome, diseño artístico). El resultado son uñas largas, fuertes y con la forma exacta que quieres.</div></div>
+          <div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">2h – 2h 30min</div></div>
+          <div class="svc-info-block"><div class="svc-info-label">⏳ Duración resultado</div><div class="svc-info-text">3–4 semanas con mantenimiento</div></div>
+          <div class="svc-tags"><span class="svc-tag">Extensión completa</span><span class="svc-tag">Forma personalizada</span><span class="svc-tag">Ultra resistente</span></div>
+        </div></div>
       </div>
+
       <div class="svc-card" onclick="toggle(this)">
-        <div class="svc-header"><div class="svc-header-left"><div class="svc-name">Mantenimiento Acrílico</div><div class="svc-tagline">Relleno de crecimiento</div></div><div class="svc-header-right"><div class="svc-price">$95.000</div><div class="svc-chevron">▾</div></div></div>
-        <div class="svc-body"><div class="svc-body-inner"><div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Cada 3–4 semanas la uña natural crece y deja un espacio visible entre la cutícula y el acrílico. El mantenimiento consiste en rellenar ese espacio con acrílico nuevo, limar y dar forma, reparar si hay alguna uña dañada, y reaplicar el diseño.</div></div><div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">1h 30min – 2h</div></div><div class="svc-info-block"><div class="svc-info-label">⚠️ Importante</div><div class="svc-info-text">Hay que hacer el mantenimiento a tiempo — dejar crecer demasiado estresa la uña y puede causar levantamiento.</div></div></div></div>
+        <div class="svc-header">
+          <div class="svc-header-left"><div class="svc-name">Mantenimiento Acrílico</div><div class="svc-tagline">Relleno de crecimiento</div></div>
+          <div class="svc-header-right"><div class="svc-price">$95.000</div><div class="svc-chevron">▾</div></div>
+        </div>
+        <div class="svc-body"><div class="svc-body-inner">
+          <div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Cada 3–4 semanas la uña natural crece y deja un espacio visible entre la cutícula y el acrílico. El mantenimiento consiste en rellenar ese espacio con acrílico nuevo, limar y dar forma, reparar si hay alguna uña dañada, y reaplicar el diseño.</div></div>
+          <div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">1h 30min – 2h</div></div>
+          <div class="svc-info-block"><div class="svc-info-label">⚠️ Importante</div><div class="svc-info-text">Hay que hacer el mantenimiento a tiempo — dejar crecer demasiado estresa la uña y puede causar levantamiento.</div></div>
+        </div></div>
       </div>
+
       <div class="svc-card" onclick="toggle(this)">
-        <div class="svc-header"><div class="svc-header-left"><div class="svc-name">Retiro Acrílico Definitivo</div></div><div class="svc-header-right"><div class="svc-price">$35.000</div><div class="svc-chevron">▾</div></div></div>
-        <div class="svc-body"><div class="svc-body-inner"><div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Retiro seguro del acrílico con técnica de inmersión y torno. Es un proceso que toma tiempo porque se hace con cuidado para no dañar la uña natural debajo. Incluye hidratación post-retiro.</div></div><div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">45 – 60 minutos</div></div><div class="svc-info-block"><div class="svc-info-label">⚠️ Importante</div><div class="svc-info-text">Nunca arranques el acrílico en casa. Se lleva capas de tu uña natural y puede causar dolor y daño permanente.</div></div></div></div>
+        <div class="svc-header">
+          <div class="svc-header-left"><div class="svc-name">Retiro Acrílico Definitivo</div></div>
+          <div class="svc-header-right"><div class="svc-price">$35.000</div><div class="svc-chevron">▾</div></div>
+        </div>
+        <div class="svc-body"><div class="svc-body-inner">
+          <div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Retiro seguro del acrílico con técnica de inmersión y torno. Es un proceso que toma tiempo porque se hace con cuidado para no dañar la uña natural debajo. Incluye hidratación post-retiro.</div></div>
+          <div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">45 – 60 minutos</div></div>
+          <div class="svc-info-block"><div class="svc-info-label">⚠️ Importante</div><div class="svc-info-text">Nunca arranques el acrílico en casa. Se lleva capas de tu uña natural y puede causar dolor y daño permanente.</div></div>
+        </div></div>
       </div>
+
       <div class="sub-heading">Baño en Acrílico — Cobertura sin extensión</div>
+
       <div class="svc-card" onclick="toggle(this)">
-        <div class="svc-header"><div class="svc-header-left"><div class="svc-name">Baño en Acrílico</div><div class="svc-tagline">Cobertura protectora sobre uña natural</div></div><div class="svc-header-right"><div class="svc-price">$80.000</div><div class="svc-chevron">▾</div></div></div>
-        <div class="svc-body"><div class="svc-body-inner"><div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">A diferencia de las esculpidas, el baño no crea extensión — aplica una capa delgada de acrílico sobre la uña natural para protegerla, darle brillo intenso y fortalecerla. Es perfecto para quienes tienen buena longitud natural pero quieren más brillo y resistencia que el semipermanente.</div></div><div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">1h 15min – 1h 30min</div></div><div class="svc-info-block"><div class="svc-info-label">👩 Ideal para</div><div class="svc-info-text">Uñas naturales largas que quieren brillo y protección sin agregar longitud artificial.</div></div><div class="svc-tags"><span class="svc-tag">Sin extensión</span><span class="svc-tag">Brillo intenso</span><span class="svc-tag">Protección</span></div></div></div>
+        <div class="svc-header">
+          <div class="svc-header-left"><div class="svc-name">Baño en Acrílico</div><div class="svc-tagline">Cobertura protectora sobre uña natural</div></div>
+          <div class="svc-header-right"><div class="svc-price">$80.000</div><div class="svc-chevron">▾</div></div>
+        </div>
+        <div class="svc-body"><div class="svc-body-inner">
+          <div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">A diferencia de las esculpidas, el baño no crea extensión — aplica una capa delgada de acrílico sobre la uña natural para protegerla, darle brillo intenso y fortalecerla. Es perfecto para quienes tienen buena longitud natural pero quieren más brillo y resistencia que el semipermanente. Se puede aplicar semipermanente encima o diseño artístico.</div></div>
+          <div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">1h 15min – 1h 30min</div></div>
+          <div class="svc-info-block"><div class="svc-info-label">👩 Ideal para</div><div class="svc-info-text">Uñas naturales largas que quieren brillo y protección sin agregar longitud artificial.</div></div>
+          <div class="svc-tags"><span class="svc-tag">Sin extensión</span><span class="svc-tag">Brillo intenso</span><span class="svc-tag">Protección</span></div>
+        </div></div>
       </div>
+
       <div class="svc-card" onclick="toggle(this)">
-        <div class="svc-header"><div class="svc-header-left"><div class="svc-name">Mantenimiento de Baño</div></div><div class="svc-header-right"><div class="svc-price">$70.000</div><div class="svc-chevron">▾</div></div></div>
-        <div class="svc-body"><div class="svc-body-inner"><div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Relleno del espacio de crecimiento en el nacimiento de la uña, corrección de posibles levantamientos y reaplicación de diseño. Se hace cada 3–4 semanas.</div></div><div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">1h – 1h 20min</div></div></div></div>
+        <div class="svc-header">
+          <div class="svc-header-left"><div class="svc-name">Mantenimiento de Baño</div></div>
+          <div class="svc-header-right"><div class="svc-price">$70.000</div><div class="svc-chevron">▾</div></div>
+        </div>
+        <div class="svc-body"><div class="svc-body-inner">
+          <div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Relleno del espacio de crecimiento en el nacimiento de la uña, corrección de posibles levantamientos y reaplicación de diseño. Se hace cada 3–4 semanas.</div></div>
+          <div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">1h – 1h 20min</div></div>
+        </div></div>
       </div>
     </div>
 
     <!-- POLYGEL -->
     <div id="tab-polygel" class="services-grid">
+
       <div class="svc-card" onclick="toggle(this)">
-        <div class="svc-header"><div class="svc-header-left"><div class="svc-name">¿Qué es el PolyGel?</div><div class="svc-tagline">Lo mejor del gel + lo mejor del acrílico</div></div><div class="svc-header-right"><div class="svc-price">ℹ️</div><div class="svc-chevron">▾</div></div></div>
-        <div class="svc-body"><div class="svc-body-inner"><div class="svc-info-block full"><div class="svc-info-label">¿Qué es el PolyGel?</div><div class="svc-info-text">El PolyGel es un material híbrido que combina las propiedades del gel (flexible, no huele fuerte, cura con lámpara) con las del acrílico (resistente, moldeable, dura mucho). Es más liviano que el acrílico, no tiene el olor fuerte del monómero líquido, y queda más natural.</div></div><div class="svc-tags"><span class="svc-tag">Más liviano que acrílico</span><span class="svc-tag">Sin olor fuerte</span><span class="svc-tag">Flexible y resistente</span><span class="svc-tag">Muy natural</span></div></div></div>
+        <div class="svc-header">
+          <div class="svc-header-left"><div class="svc-name">¿Qué es el PolyGel?</div><div class="svc-tagline">Lo mejor del gel + lo mejor del acrílico</div></div>
+          <div class="svc-header-right"><div class="svc-price">ℹ️</div><div class="svc-chevron">▾</div></div>
+        </div>
+        <div class="svc-body"><div class="svc-body-inner">
+          <div class="svc-info-block full"><div class="svc-info-label">¿Qué es el PolyGel?</div><div class="svc-info-text">El PolyGel es un material híbrido que combina las propiedades del gel (flexible, no huele fuerte, cura con lámpara) con las del acrílico (resistente, moldeable, dura mucho). Es más liviano que el acrílico, no tiene el olor fuerte del monómero líquido, y queda más natural. Es el material preferido para quienes quieren resistencia sin el peso del acrílico tradicional.</div></div>
+          <div class="svc-tags"><span class="svc-tag">Más liviano que acrílico</span><span class="svc-tag">Sin olor fuerte</span><span class="svc-tag">Flexible y resistente</span><span class="svc-tag">Muy natural</span></div>
+        </div></div>
       </div>
+
       <div class="sub-heading">Esculpido — Extensión completa</div>
+
       <div class="svc-card" onclick="toggle(this)">
-        <div class="svc-header"><div class="svc-header-left"><div class="svc-name">PolyGel Esculpido</div><div class="svc-tagline">Extensión esculpida · liviana y durable</div></div><div class="svc-header-right"><div class="svc-price">$145.000</div><div class="svc-chevron">▾</div></div></div>
-        <div class="svc-body"><div class="svc-body-inner"><div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Se aplica el PolyGel sobre un molde o tip para esculpir la extensión deseada, se cura con lámpara LED, se lima y da forma. El resultado es una extensión más ligera que el acrílico, con acabado muy parecido a la uña natural.</div></div><div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">1h 45min – 2h 30min</div></div><div class="svc-info-block"><div class="svc-info-label">⏳ Duración resultado</div><div class="svc-info-text">3–5 semanas con mantenimiento</div></div><div class="svc-tags"><span class="svc-tag">Más popular</span><span class="svc-tag">Sin olor</span><span class="svc-tag">Ultra liviano</span></div></div></div>
+        <div class="svc-header">
+          <div class="svc-header-left"><div class="svc-name">PolyGel Esculpido</div><div class="svc-tagline">Extensión esculpida · liviana y durable</div></div>
+          <div class="svc-header-right"><div class="svc-price">$145.000</div><div class="svc-chevron">▾</div></div>
+        </div>
+        <div class="svc-body"><div class="svc-body-inner">
+          <div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Se aplica el PolyGel sobre un molde o tip para esculpir la extensión deseada, se cura con lámpara LED, se lima y da forma. El resultado es una extensión más ligera que el acrílico, con acabado muy parecido a la uña natural. Se puede aplicar cualquier diseño encima.</div></div>
+          <div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">1h 45min – 2h 30min</div></div>
+          <div class="svc-info-block"><div class="svc-info-label">⏳ Duración resultado</div><div class="svc-info-text">3–5 semanas con mantenimiento</div></div>
+          <div class="svc-tags"><span class="svc-tag">Más popular</span><span class="svc-tag">Sin olor</span><span class="svc-tag">Ultra liviano</span></div>
+        </div></div>
       </div>
+
       <div class="svc-card" onclick="toggle(this)">
-        <div class="svc-header"><div class="svc-header-left"><div class="svc-name">Mantenimiento PolyGel</div></div><div class="svc-header-right"><div class="svc-price">$95.000</div><div class="svc-chevron">▾</div></div></div>
-        <div class="svc-body"><div class="svc-body-inner"><div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Relleno del espacio de crecimiento con PolyGel nuevo, corrección de forma, reparación de daños y reaplicación del diseño. Se hace cada 3–4 semanas para mantener el resultado impecable.</div></div><div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">1h 30min – 2h</div></div></div></div>
+        <div class="svc-header">
+          <div class="svc-header-left"><div class="svc-name">Mantenimiento PolyGel</div></div>
+          <div class="svc-header-right"><div class="svc-price">$95.000</div><div class="svc-chevron">▾</div></div>
+        </div>
+        <div class="svc-body"><div class="svc-body-inner">
+          <div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Relleno del espacio de crecimiento con PolyGel nuevo, corrección de forma, reparación de daños y reaplicación del diseño. Se hace cada 3–4 semanas para mantener el resultado impecable.</div></div>
+          <div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">1h 30min – 2h</div></div>
+        </div></div>
       </div>
+
       <div class="sub-heading">Baño en PolyGel — Cobertura sin extensión</div>
+
       <div class="svc-card" onclick="toggle(this)">
-        <div class="svc-header"><div class="svc-header-left"><div class="svc-name">Baño en PolyGel</div><div class="svc-tagline">Cobertura liviana sobre uña natural</div></div><div class="svc-header-right"><div class="svc-price">$70.000</div><div class="svc-chevron">▾</div></div></div>
-        <div class="svc-body"><div class="svc-body-inner"><div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Igual que el baño en acrílico pero con PolyGel — una capa protectora sobre la uña natural que la fortalece, le da brillo y alarga un poco la vida de los diseños. Más liviano que el baño en acrílico y sin olor.</div></div><div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">1h – 1h 20min</div></div><div class="svc-info-block"><div class="svc-info-label">👩 Ideal para</div><div class="svc-info-text">Quienes tienen uñas naturales y quieren protegerlas sin peso ni olor.</div></div></div></div>
+        <div class="svc-header">
+          <div class="svc-header-left"><div class="svc-name">Baño en PolyGel</div><div class="svc-tagline">Cobertura liviana sobre uña natural</div></div>
+          <div class="svc-header-right"><div class="svc-price">$70.000</div><div class="svc-chevron">▾</div></div>
+        </div>
+        <div class="svc-body"><div class="svc-body-inner">
+          <div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Igual que el baño en acrílico pero con PolyGel — una capa protectora sobre la uña natural que la fortalece, le da brillo y alarga un poco la vida de los diseños. Más liviano que el baño en acrílico y sin olor. Ideal para uñas naturales que quieren cobertura extra.</div></div>
+          <div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">1h – 1h 20min</div></div>
+          <div class="svc-info-block"><div class="svc-info-label">👩 Ideal para</div><div class="svc-info-text">Quienes tienen uñas naturales y quieren protegerlas sin peso ni olor.</div></div>
+        </div></div>
       </div>
     </div>
 
     <!-- PEDICURE -->
     <div id="tab-pedicure" class="services-grid">
+
       <div class="svc-card" onclick="toggle(this)">
-        <div class="svc-header"><div class="svc-header-left"><div class="svc-name">Limpieza de Pies (sin esmalte)</div></div><div class="svc-header-right"><div class="svc-price">$30.000</div><div class="svc-chevron">▾</div></div></div>
-        <div class="svc-body"><div class="svc-body-inner"><div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Ablandamiento en tina, corte y limado de uñas, retiro de cutículas, limpieza básica de durezas con lija y piedra, hidratación. Sin esmalte.</div></div><div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">45 – 55 minutos</div></div></div></div>
+        <div class="svc-header">
+          <div class="svc-header-left"><div class="svc-name">Limpieza de Pies (sin esmalte)</div></div>
+          <div class="svc-header-right"><div class="svc-price">$30.000</div><div class="svc-chevron">▾</div></div>
+        </div>
+        <div class="svc-body"><div class="svc-body-inner">
+          <div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Ablandamiento en tina, corte y limado de uñas, retiro de cutículas, limpieza básica de durezas con lija y piedra, hidratación. Sin esmalte.</div></div>
+          <div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">45 – 55 minutos</div></div>
+        </div></div>
       </div>
+
       <div class="svc-card" onclick="toggle(this)">
-        <div class="svc-header"><div class="svc-header-left"><div class="svc-name">Réels Pedi Classic</div><div class="svc-tagline">Pedicure completo + esmalte</div></div><div class="svc-header-right"><div class="svc-price">$65.000</div><div class="svc-chevron">▾</div></div></div>
-        <div class="svc-body"><div class="svc-body-inner"><div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Tina de ablandamiento, corte y forma de uñas, retiro de cutículas, limpieza de durezas y callosidades, hidratación de pies y aplicación de esmalte tradicional en el tono que elijas.</div></div><div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">50 – 65 minutos</div></div><div class="svc-info-block"><div class="svc-info-label">⏳ Duración esmalte</div><div class="svc-info-text">7–10 días (esmalte tradicional)</div></div></div></div>
+        <div class="svc-header">
+          <div class="svc-header-left"><div class="svc-name">Réels Pedi Classic</div><div class="svc-tagline">Pedicure completo + esmalte</div></div>
+          <div class="svc-header-right"><div class="svc-price">$65.000</div><div class="svc-chevron">▾</div></div>
+        </div>
+        <div class="svc-body"><div class="svc-body-inner">
+          <div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Tina de ablandamiento, corte y forma de uñas, retiro de cutículas, limpieza de durezas y callosidades, hidratación de pies y aplicación de esmalte tradicional en el tono que elijas.</div></div>
+          <div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">50 – 65 minutos</div></div>
+          <div class="svc-info-block"><div class="svc-info-label">⏳ Duración esmalte</div><div class="svc-info-text">7–10 días (esmalte tradicional)</div></div>
+        </div></div>
       </div>
+
       <div class="svc-card" onclick="toggle(this)">
-        <div class="svc-header"><div class="svc-header-left"><div class="svc-name">Réels Pedi Semi</div><div class="svc-tagline">Pedicure completo + semipermanente</div></div><div class="svc-header-right"><div class="svc-price">$85.000</div><div class="svc-chevron">▾</div></div></div>
-        <div class="svc-body"><div class="svc-body-inner"><div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Todo lo del Pedi Classic más aplicación de esmalte semipermanente en los pies, que dura entre 3 y 5 semanas sin despegarse. Ideal si vas a la playa, piscina o usas sandalias con frecuencia.</div></div><div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">1h – 1h 15min</div></div><div class="svc-info-block"><div class="svc-info-label">⏳ Duración esmalte</div><div class="svc-info-text">3–5 semanas</div></div><div class="svc-tags"><span class="svc-tag">Duración larga</span><span class="svc-tag">Ideal playa/piscina</span></div></div></div>
+        <div class="svc-header">
+          <div class="svc-header-left"><div class="svc-name">Réels Pedi Semi</div><div class="svc-tagline">Pedicure completo + semipermanente</div></div>
+          <div class="svc-header-right"><div class="svc-price">$85.000</div><div class="svc-chevron">▾</div></div>
+        </div>
+        <div class="svc-body"><div class="svc-body-inner">
+          <div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Todo lo del Pedi Classic más aplicación de esmalte semipermanente en los pies, que dura entre 3 y 5 semanas sin despegarse. Ideal si vas a la playa, piscina o usas sandalias con frecuencia.</div></div>
+          <div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">1h – 1h 15min</div></div>
+          <div class="svc-info-block"><div class="svc-info-label">⏳ Duración esmalte</div><div class="svc-info-text">3–5 semanas</div></div>
+          <div class="svc-tags"><span class="svc-tag">Duración larga</span><span class="svc-tag">Ideal playa/piscina</span></div>
+        </div></div>
       </div>
+
       <div class="svc-card" onclick="toggle(this)">
-        <div class="svc-header"><div class="svc-header-left"><div class="svc-name">Réels Pedi Spa</div><div class="svc-tagline">Pedicure + exfoliación + mascarilla + masaje</div></div><div class="svc-header-right"><div class="svc-price">$110.000</div><div class="svc-chevron">▾</div></div></div>
-        <div class="svc-body"><div class="svc-body-inner"><div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">La versión completa del pedicure. Incluye tina aromática, pedicure completo, exfoliación de pies y talones, eliminación de durezas profunda, mascarilla hidratante de 10 min, toalla caliente aromática, masaje de pies de 5 minutos y esmalte a elección.</div></div><div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">1h 15min – 1h 30min</div></div><div class="svc-info-block"><div class="svc-info-label">👩 Ideal para</div><div class="svc-info-text">Un momento de desconexión total. Para los pies más cansados, secos o con durezas pronunciadas.</div></div><div class="svc-tags"><span class="svc-tag">Experiencia completa</span><span class="svc-tag">Masaje incluido</span><span class="svc-tag">Para tratamiento profundo</span></div></div></div>
+        <div class="svc-header">
+          <div class="svc-header-left"><div class="svc-name">Réels Pedi Spa</div><div class="svc-tagline">Pedicure + exfoliación + mascarilla + masaje</div></div>
+          <div class="svc-header-right"><div class="svc-price">$110.000</div><div class="svc-chevron">▾</div></div>
+        </div>
+        <div class="svc-body"><div class="svc-body-inner">
+          <div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">La versión completa del pedicure. Incluye tina aromática, pedicure completo, exfoliación de pies y talones, eliminación de durezas profunda, mascarilla hidratante de 10 min, toalla caliente aromática, masaje de pies de 5 minutos y esmalte a elección (tradicional o semipermanente con costo adicional).</div></div>
+          <div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">1h 15min – 1h 30min</div></div>
+          <div class="svc-info-block"><div class="svc-info-label">👩 Ideal para</div><div class="svc-info-text">Un momento de desconexión total. Para los pies más cansados, secos o con durezas pronunciadas.</div></div>
+          <div class="svc-tags"><span class="svc-tag">Experiencia completa</span><span class="svc-tag">Masaje incluido</span><span class="svc-tag">Para tratamiento profundo</span></div>
+        </div></div>
       </div>
     </div>
 
     <!-- EXTRAS -->
     <div id="tab-extras" class="services-grid">
+
       <div class="svc-card" onclick="toggle(this)">
-        <div class="svc-header"><div class="svc-header-left"><div class="svc-name">Diseño por uña</div><div class="svc-tagline">Arte personalizado</div></div><div class="svc-header-right"><div class="svc-price">$5.000 – $12.000</div><div class="svc-chevron">▾</div></div></div>
-        <div class="svc-body"><div class="svc-body-inner"><div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Arte manual sobre la uña con pincel — flores, líneas, puntos, formas geométricas, letras, personajes, etc. El precio varía según la complejidad: diseños simples $5.000/uña, diseños elaborados hasta $12.000/uña. Se cobra por uña decorada, no por todo el juego.</div></div><div class="svc-info-block"><div class="svc-info-label">⏱ Tiempo adicional</div><div class="svc-info-text">+15 a 30 min según cantidad y diseño</div></div></div></div>
+        <div class="svc-header">
+          <div class="svc-header-left"><div class="svc-name">Diseño por uña</div><div class="svc-tagline">Arte personalizado</div></div>
+          <div class="svc-header-right"><div class="svc-price">$5.000 – $12.000</div><div class="svc-chevron">▾</div></div>
+        </div>
+        <div class="svc-body"><div class="svc-body-inner">
+          <div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Arte manual sobre la uña con pincel — flores, líneas, puntos, formas geométricas, letras, personajes, etc. El precio varía según la complejidad: diseños simples $5.000/uña, diseños elaborados hasta $12.000/uña. Se cobra por uña decorada, no por todo el juego.</div></div>
+          <div class="svc-info-block"><div class="svc-info-label">⏱ Tiempo adicional</div><div class="svc-info-text">+15 a 30 min según cantidad y diseño</div></div>
+        </div></div>
       </div>
+
       <div class="svc-card" onclick="toggle(this)">
-        <div class="svc-header"><div class="svc-header-left"><div class="svc-name">Chrome / Cat Eye / Efecto especial</div></div><div class="svc-header-right"><div class="svc-price">$22.000 – $45.000</div><div class="svc-chevron">▾</div></div></div>
-        <div class="svc-body"><div class="svc-body-inner"><div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Chrome: polvo metálico que se aplica para dar un efecto espejo o aurora. Cat Eye: polvo magnético que crea un efecto visual como el ojo de un gato al pasar un imán. Efectos especiales: glacé, sugar, holográfico, velvet y más.</div></div><div class="svc-info-block"><div class="svc-info-label">⏱ Tiempo adicional</div><div class="svc-info-text">+10 a 20 min</div></div><div class="svc-tags"><span class="svc-tag">Chrome</span><span class="svc-tag">Cat Eye magnético</span><span class="svc-tag">Aurora</span><span class="svc-tag">Holográfico</span></div></div></div>
+        <div class="svc-header">
+          <div class="svc-header-left"><div class="svc-name">Chrome / Cat Eye / Efecto especial</div></div>
+          <div class="svc-header-right"><div class="svc-price">$22.000 – $45.000</div><div class="svc-chevron">▾</div></div>
+        </div>
+        <div class="svc-body"><div class="svc-body-inner">
+          <div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Chrome: polvo metálico que se aplica para dar un efecto espejo o aurora. Cat Eye: polvo magnético que crea un efecto visual como el ojo de un gato al pasar un imán. Efectos especiales: glacé, sugar, holográfico, velvet y más. Se aplican sobre el semipermanente ya curado.</div></div>
+          <div class="svc-info-block"><div class="svc-info-label">⏱ Tiempo adicional</div><div class="svc-info-text">+10 a 20 min</div></div>
+          <div class="svc-tags"><span class="svc-tag">Chrome</span><span class="svc-tag">Cat Eye magnético</span><span class="svc-tag">Aurora</span><span class="svc-tag">Holográfico</span></div>
+        </div></div>
       </div>
+
       <div class="svc-card" onclick="toggle(this)">
-        <div class="svc-header"><div class="svc-header-left"><div class="svc-name">Francesa Premium</div></div><div class="svc-header-right"><div class="svc-price">$18.000 – $28.000</div><div class="svc-chevron">▾</div></div></div>
-        <div class="svc-body"><div class="svc-body-inner"><div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">La clásica punta blanca con base natural, hecha a mano con pincel para que quede perfectamente simétrica. También disponible en variantes de color: francesa de color, baby french (muy sutil), francesa inversa y otros estilos.</div></div><div class="svc-info-block"><div class="svc-info-label">⏱ Tiempo adicional</div><div class="svc-info-text">+10 a 15 min</div></div></div></div>
+        <div class="svc-header">
+          <div class="svc-header-left"><div class="svc-name">Francesa Premium</div></div>
+          <div class="svc-header-right"><div class="svc-price">$18.000 – $28.000</div><div class="svc-chevron">▾</div></div>
+        </div>
+        <div class="svc-body"><div class="svc-body-inner">
+          <div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">La clásica punta blanca con base natural, hecha a mano con pincel para que quede perfectamente simétrica. También disponible en variantes de color: francesa de color, baby french (muy sutil), francesa inversa y otros estilos. Se agrega a cualquier servicio de manicure.</div></div>
+          <div class="svc-info-block"><div class="svc-info-label">⏱ Tiempo adicional</div><div class="svc-info-text">+10 a 15 min</div></div>
+        </div></div>
       </div>
+
       <div class="svc-card" onclick="toggle(this)">
-        <div class="svc-header"><div class="svc-header-left"><div class="svc-name">Masaje de manos (5 min adicionales)</div></div><div class="svc-header-right"><div class="svc-price">$25.000</div><div class="svc-chevron">▾</div></div></div>
-        <div class="svc-body"><div class="svc-body-inner"><div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Masaje de 5 minutos en manos, muñecas y antebrazos con crema hidratante y aceite de cutícula. Mejora la circulación, alivia tensión y deja las manos suaves. Se agrega al final de cualquier manicure.</div></div><div class="svc-info-block"><div class="svc-info-label">💡 Recomendación</div><div class="svc-info-text">Perfecto para quien trabaja muchas horas en computador o tiene manos tensas.</div></div></div></div>
+        <div class="svc-header">
+          <div class="svc-header-left"><div class="svc-name">Masaje de manos (5 min adicionales)</div></div>
+          <div class="svc-header-right"><div class="svc-price">$25.000</div><div class="svc-chevron">▾</div></div>
+        </div>
+        <div class="svc-body"><div class="svc-body-inner">
+          <div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Masaje de 5 minutos en manos, muñecas y antebrazos con crema hidratante y aceite de cutícula. Mejora la circulación, alivia tensión y deja las manos suaves. Se agrega al final de cualquier manicure.</div></div>
+          <div class="svc-info-block"><div class="svc-info-label">💡 Recomendación</div><div class="svc-info-text">Perfecto para quien trabaja muchas horas en computador o tiene manos tensas.</div></div>
+        </div></div>
       </div>
+
       <div class="svc-card" onclick="toggle(this)">
-        <div class="svc-header"><div class="svc-header-left"><div class="svc-name">Reparación de uña</div></div><div class="svc-header-right"><div class="svc-price">$10.000 – $18.000</div><div class="svc-chevron">▾</div></div></div>
-        <div class="svc-body"><div class="svc-body-inner"><div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Reconstrucción de 1 uña que se quebró, se partió o se dañó. Se evalúa la uña, se aplica el material adecuado (acrílico, polygel o seda), se da forma y se integra al diseño existente para que quede igual a las demás.</div></div><div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">15 – 25 minutos por uña</div></div></div></div>
+        <div class="svc-header">
+          <div class="svc-header-left"><div class="svc-name">Reparación de uña</div></div>
+          <div class="svc-header-right"><div class="svc-price">$10.000 – $18.000</div><div class="svc-chevron">▾</div></div>
+        </div>
+        <div class="svc-body"><div class="svc-body-inner">
+          <div class="svc-info-block full"><div class="svc-info-label">¿En qué consiste?</div><div class="svc-info-text">Reconstrucción de 1 uña que se quebró, se partió o se dañó. Se evalúa la uña, se aplica el material adecuado (acrílico, polygel o seda), se da forma y se integra al diseño existente para que quede igual a las demás.</div></div>
+          <div class="svc-info-block"><div class="svc-info-label">⏱ Duración</div><div class="svc-info-text">15 – 25 minutos por uña</div></div>
+        </div></div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="feature" id="experiencia">
+ <section class="feature" id="experiencia">
   <div class="feature-glow"></div>
   <div class="container">
     <div class="feature-inner">
@@ -786,28 +1266,36 @@
   </div>
 </section>
 
-<!-- PORTAFOLIO -->
+ <!-- PORTAFOLIO -->
 <section class="portfolio" id="portafolio">
   <div class="container">
     <p class="section-label reveal">Nuestro trabajo</p>
     <h2 class="section-title reveal">Portafolio <em>real</em></h2>
     <p class="portfolio-intro reveal">Cada diseño es único. Así luce el trabajo de Réels.</p>
+
     <div class="portfolio-grid reveal">
-      <div class="portfolio-item"><img src="foto1.jpg" alt="Trabajo Réels"></div>
-      <div class="portfolio-item"><img src="FOTO2.JPG" alt="Trabajo Réels"></div>
-      <div class="portfolio-item"><img src="FOTO3.JPG" alt="Trabajo Réels"></div>
-      <div class="portfolio-item"><img src="FOTO4.JPG" alt="Trabajo Réels"></div>
-      <div class="portfolio-item"><img src="FOTO5.JPG" alt="Trabajo Réels"></div>
-      <div class="portfolio-item"><img src="FOTO6.JPG" alt="Trabajo Réels"></div>
-      <div class="portfolio-item" style="grid-column: 2 / 3;"><img src="FOTO7.JPG" alt="Trabajo Réels"></div>
-    </div>
+  <div class="portfolio-item"><img src="foto1.jpg" alt="Trabajo Réels"></div>
+  <div class="portfolio-item"><img src="FOTO2.JPG" alt="Trabajo Réels"></div>
+  <div class="portfolio-item"><img src="FOTO3.JPG" alt="Trabajo Réels"></div>
+  <div class="portfolio-item"><img src="FOTO4.JPG" alt="Trabajo Réels"></div>
+  <div class="portfolio-item"><img src="FOTO5.JPG" alt="Trabajo Réels"></div>
+  <div class="portfolio-item"><img src="FOTO6.JPG" alt="Trabajo Réels"></div>
+  <div class="portfolio-item" style="grid-column: 2 / 3;"><img src="FOTO7.JPG" alt="Trabajo Réels"></div>
+
+
+
+</div>
+
+
     <div style="text-align:center; margin-top:2.5rem;">
-      <a href="https://instagram.com/reelsnailsco" target="_blank" class="btn-primary">📷 Ver más en Instagram</a>
+      <a href="https://instagram.com/reelsnailsco" target="_blank" class="btn-primary">
+        📷 Ver más en Instagram
+      </a>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
+ <!-- CONTACT -->
 <section class="contact" id="contacto">
   <div class="contact-glow"></div>
   <div class="container" style="position:relative;">
@@ -824,6 +1312,7 @@
         <div class="contact-method-text"><span class="contact-method-label">Instagram</span>@reelsnailsco</div>
       </a>
     </div>
+
     <p class="section-label reveal" style="margin-top:2.5rem; margin-bottom:1rem;">Medios de pago · Anticipo $30.000</p>
     <div class="contact-methods reveal" style="margin-top:0;">
       <div class="contact-method" onclick="copiar('3125873380', this)" style="cursor:pointer;">
@@ -842,10 +1331,13 @@
         <span class="copy-btn">Copiar</span>
       </div>
     </div>
-    <div style="text-align:center; margin: 2rem 0;">
-      <a href="https://calendly.com/reelsnailsco" target="_blank" class="btn-primary" style="font-size:1rem; padding:1rem 2.5rem;">📅 Agendar cita online</a>
-    </div>
-    <p class="contact-note reveal" style="margin-top:2rem;">Precios actualizados abril 2026 · Sujetos a cambio · Confirma disponibilidad antes de agendar</p>
+<div style="text-align:center; margin: 2rem 0;">
+  <a href="https://calendly.com/reelsnailsco" target="_blank" class="btn-primary" style="font-size:1rem; padding:1rem 2.5rem;">
+    📅 Agendar cita online
+  </a>
+</div>
+
+  <p class="contact-note reveal" style="margin-top:2rem;">Precios actualizados abril 2026 · Sujetos a cambio · Confirma disponibilidad antes de agendar</p>
   </div>
 </section>
 
@@ -859,6 +1351,7 @@
 <img class="floating-sticker sticker-3" src="sticker2.png" alt="" aria-hidden="true">
 
 <script>
+
 function toggleMenu() {
   const menu = document.getElementById('mobileMenu');
   const btn = document.getElementById('hamburger');
@@ -869,34 +1362,64 @@ function closeMenu() {
   document.getElementById('mobileMenu').classList.remove('open');
   document.getElementById('hamburger').classList.remove('open');
 }
+
 function showTab(name, btn) {
   document.querySelectorAll('.services-grid').forEach(g => g.classList.remove('active'));
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
   document.getElementById('tab-' + name).classList.add('active');
   btn.classList.add('active');
 }
-function copiar(texto, elemento) {
+
+
+ function copiar(texto, elemento) {
   navigator.clipboard.writeText(texto).then(() => {
     const btn = elemento.querySelector('.copy-btn');
     btn.textContent = '✓ Copiado';
     btn.style.background = 'rgba(233,30,140,0.4)';
-    setTimeout(() => { btn.textContent = 'Copiar'; btn.style.background = ''; }, 2000);
+    setTimeout(() => {
+      btn.textContent = 'Copiar';
+      btn.style.background = '';
+    }, 2000);
   });
 }
-function toggle(card) {
-  const isOpen = card.classList.contains('open');
-  card.closest('.services-grid').querySelectorAll('.svc-card').forEach(c => c.classList.remove('open'));
-  if (!isOpen) card.classList.add('open');
-}
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((e, i) => { if (e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i * 60); });
-}, { threshold: 0.1 });
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-document.addEventListener('mousemove', function(e) { for (let i = 0; i < 3; i++) setTimeout(() => createSparkle(e.clientX, e.clientY), i * 60); });
-document.addEventListener('click', function(e) { for (let i = 0; i < 8; i++) setTimeout(() => createSparkle(e.clientX, e.clientY), i * 40); });
-document.addEventListener('touchstart', function(e) { const t = e.touches[0]; for (let i = 0; i < 8; i++) setTimeout(() => createSparkle(t.clientX, t.clientY), i * 40); });
-document.addEventListener('touchmove', function(e) { const t = e.touches[0]; for (let i = 0; i < 3; i++) setTimeout(() => createSparkle(t.clientX, t.clientY), i * 60); });
+ 
+  function toggle(card) {
+    const isOpen = card.classList.contains('open');
+    card.closest('.services-grid').querySelectorAll('.svc-card').forEach(c => c.classList.remove('open'));
+    if (!isOpen) card.classList.add('open');
+  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => { if (e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i * 60); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ✨ Glitter cursor
+document.addEventListener('mousemove', function(e) {
+  for (let i = 0; i < 3; i++) {
+    setTimeout(() => createSparkle(e.clientX, e.clientY), i * 60);
+  }
+});
+
+document.addEventListener('click', function(e) {
+  for (let i = 0; i < 8; i++) {
+    setTimeout(() => createSparkle(e.clientX, e.clientY), i * 40);
+  }
+});
+
+document.addEventListener('touchstart', function(e) {
+  const touch = e.touches[0];
+  for (let i = 0; i < 8; i++) {
+    setTimeout(() => createSparkle(touch.clientX, touch.clientY), i * 40);
+  }
+});
+
+document.addEventListener('touchmove', function(e) {
+  const touch = e.touches[0];
+  for (let i = 0; i < 3; i++) {
+    setTimeout(() => createSparkle(touch.clientX, touch.clientY), i * 60);
+  }
+});
 
 function createSparkle(x, y) {
   const sparkle = document.createElement('div');
@@ -904,13 +1427,29 @@ function createSparkle(x, y) {
   const angle = Math.random() * 360;
   const distance = Math.random() * 50 + 20;
   const duration = Math.random() * 1200 + 900;
-  sparkle.style.cssText = `position:fixed;left:${x}px;top:${y}px;width:${size}px;height:${size}px;pointer-events:none;z-index:9999;border-radius:50%;background:white;box-shadow:0 0 ${size*2}px rgba(255,255,255,0.9),0 0 ${size*4}px rgba(255,220,255,0.4);transform:translate(-50%,-50%);`;
+
+  sparkle.style.cssText = `
+    position: fixed;
+    left: ${x}px;
+    top: ${y}px;
+    width: ${size}px;
+    height: ${size}px;
+    pointer-events: none;
+    z-index: 9999;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 0 ${size * 2}px rgba(255,255,255,0.9), 0 0 ${size * 4}px rgba(255,220,255,0.4);
+    transform: translate(-50%, -50%);
+  `;
+
   document.body.appendChild(sparkle);
+
   const rad = (angle * Math.PI) / 180;
   sparkle.animate([
-    { transform: `translate(-50%,-50%) scale(1)`, opacity: 1 },
-    { transform: `translate(calc(-50% + ${Math.cos(rad)*distance}px),calc(-50% + ${Math.sin(rad)*distance}px)) scale(0)`, opacity: 0 }
+    { transform: `translate(-50%, -50%) scale(1)`, opacity: 1 },
+    { transform: `translate(calc(-50% + ${Math.cos(rad) * distance}px), calc(-50% + ${Math.sin(rad) * distance}px)) scale(0)`, opacity: 0 }
   ], { duration, easing: 'ease-out', fill: 'forwards' });
+
   setTimeout(() => sparkle.remove(), duration);
 }
 </script>
