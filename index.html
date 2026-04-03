@@ -617,43 +617,32 @@
   </div>
 </section>
 
- <!-- MI HISTORIA -->
-<section style="background: var(--dark); padding: 7rem 2rem;">
+<!-- MI HISTORIA -->
+<section class="historia-seccion" style="padding: 7rem 2rem;">
   <div class="container">
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;">
+
+    <!-- FRASE INSPIRACIONAL -->
+    <div class="reveal" style="text-align: center; margin-bottom: 4rem;">
+      <p style="font-family: 'Cormorant Garamond', serif; font-size: clamp(1.4rem, 3vw, 2rem); font-style: italic; color: var(--pink); line-height: 1.5;">
+        "Las uñas son el detalle que nadie olvida."
+      </p>
+    </div>
+
+    <div class="historia-grid">
 
       <!-- FOTO -->
-      <div class="reveal" style="position: relative;">
+      <div class="reveal">
         <div style="
           border-radius: 2rem;
           overflow: hidden;
+          width: 100%;
           aspect-ratio: 3/4;
           border: 1px solid rgba(233,30,140,0.25);
           box-shadow: 0 0 80px rgba(233,30,140,0.1);
         ">
           <img src="johanna.jpg" alt="Johanna Reales – RÉELS Nails Co"
-            style="width:100%; height:100%; object-fit:cover; display:block;">
+            style="width:100%; height:100%; object-fit:cover; object-position: center top; display:block;">
         </div>
-        <div style="
-          position: absolute;
-          bottom: -1.5rem; right: -1.5rem;
-          width: 110px; height: 110px;
-          border: 1px solid rgba(233,30,140,0.25);
-          border-radius: 1rem;
-          z-index: -1;
-        "></div>
-        <div style="
-          position: absolute;
-          top: -1rem; left: -1rem;
-          background: var(--pink);
-          color: white;
-          font-size: 0.72rem;
-          letter-spacing: 0.15em;
-          text-transform: uppercase;
-          padding: 0.5rem 1.2rem;
-          border-radius: 2rem;
-          font-family: 'DM Sans', sans-serif;
-        ">✈️ Inspirada viajando · 2018</div>
       </div>
 
       <!-- TEXTO -->
@@ -661,52 +650,49 @@
         <p class="section-label">La persona detrás de las uñas</p>
         <h2 class="section-title" style="margin-bottom: 1.8rem;">Hola, soy <em>Johanna</em></h2>
 
-        <p style="color: rgba(255,255,255,0.6); line-height: 1.9; margin-bottom: 1rem; font-size: 1.05rem;">
-          Estudié publicidad — pero fue un viaje al extranjero en 2018 el que cambió todo. 
-          Descubrí que las uñas son un arte que cruza fronteras, culturas y lenguajes. 
+        <p class="historia-parrafo">
+          Estudié publicidad — pero fue un viaje al extranjero en 2018 el que cambió todo.
+          Descubrí que las uñas son un arte que cruza fronteras, culturas y lenguajes.
           Volví con una certeza: <strong style="color: var(--pink);">quería crear eso aquí.</strong>
         </p>
-        <p style="color: rgba(255,255,255,0.6); line-height: 1.9; font-size: 1.05rem;">
-          Empecé de forma empírica, aprendiendo con cada clienta, y con el tiempo me 
-          preparé técnicamente hasta dominar cada servicio que hoy ofrezco. 
+        <p class="historia-parrafo">
+          Empecé de forma empírica, aprendiendo con cada clienta, y con el tiempo me
+          preparé técnicamente hasta dominar cada servicio que hoy ofrezco.
           RÉELS es el resultado de años de amor propio convertido en oficio.
         </p>
 
         <!-- Timeline -->
         <div style="margin-top: 2.5rem; display: flex; flex-direction: column; gap: 0;">
 
-          <!-- Item -->
-          <div style="display: flex; gap: 1.2rem; padding-bottom: 1.6rem; position: relative;">
+          <div style="display: flex; gap: 1.2rem; padding-bottom: 1.6rem;">
             <div style="display: flex; flex-direction: column; align-items: center; flex-shrink: 0;">
               <div style="width: 38px; height: 38px; border-radius: 50%; background: rgba(233,30,140,0.15); border: 1px solid rgba(233,30,140,0.4); display: flex; align-items: center; justify-content: center; font-size: 0.62rem; color: var(--pink); font-weight: 600;">2018</div>
               <div style="width: 1px; flex: 1; background: rgba(233,30,140,0.15); margin-top: 6px;"></div>
             </div>
             <div style="padding-top: 0.5rem;">
-              <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem; font-weight: 500; margin-bottom: 0.2rem;">Un viaje que lo cambió todo ✈️</p>
-              <p style="color: var(--gray); font-size: 0.82rem; line-height: 1.5;">Inspiración en el extranjero · primeras prácticas empíricas</p>
+              <p class="historia-timeline-titulo">Un viaje que lo cambió todo ✈️</p>
+              <p class="historia-timeline-desc">Inspiración en el extranjero · primeras prácticas empíricas</p>
             </div>
           </div>
 
-          <!-- Item -->
-          <div style="display: flex; gap: 1.2rem; padding-bottom: 1.6rem; position: relative;">
+          <div style="display: flex; gap: 1.2rem; padding-bottom: 1.6rem;">
             <div style="display: flex; flex-direction: column; align-items: center; flex-shrink: 0;">
               <div style="width: 38px; height: 38px; border-radius: 50%; background: rgba(233,30,140,0.15); border: 1px solid rgba(233,30,140,0.4); display: flex; align-items: center; justify-content: center; font-size: 0.62rem; color: var(--pink); font-weight: 600;">2021</div>
               <div style="width: 1px; flex: 1; background: rgba(233,30,140,0.15); margin-top: 6px;"></div>
             </div>
             <div style="padding-top: 0.5rem;">
-              <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem; font-weight: 500; margin-bottom: 0.2rem;">De empírica a técnica 💅</p>
-              <p style="color: var(--gray); font-size: 0.82rem; line-height: 1.5;">Formación profesional · especialización en PolyGel y acrílico</p>
+              <p class="historia-timeline-titulo">De empírica a técnica 💅</p>
+              <p class="historia-timeline-desc">Formación profesional · especialización en PolyGel y acrílico</p>
             </div>
           </div>
 
-          <!-- Item activo -->
           <div style="display: flex; gap: 1.2rem;">
             <div style="display: flex; flex-direction: column; align-items: center; flex-shrink: 0;">
               <div style="width: 38px; height: 38px; border-radius: 50%; background: var(--pink); display: flex; align-items: center; justify-content: center; font-size: 0.62rem; color: white; font-weight: 600; box-shadow: 0 0 16px rgba(233,30,140,0.5);">2024</div>
             </div>
             <div style="padding-top: 0.5rem;">
               <p style="color: var(--pink); font-size: 0.9rem; font-weight: 500; margin-bottom: 0.2rem;">Nace RÉELS Nails Co ✦</p>
-              <p style="color: var(--gray); font-size: 0.82rem; line-height: 1.5;">Studio boutique en Bogotá · atención 1:1 · experiencia completa</p>
+              <p class="historia-timeline-desc">Studio boutique en Bogotá · atención 1:1 · experiencia completa</p>
             </div>
           </div>
 
