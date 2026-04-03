@@ -543,6 +543,8 @@
   <ul class="nav-links">
     <li><a href="#políticas">Políticas</a></li>
     <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#historia">Mi Historia</a></li>
+    <li><a href="#reseñas">Reseñas</a></li>
     <li><a href="#portafolio">Portafolio</a></li>
     <li><a href="#combos">Combos</a></li>
     <li><a href="#experiencia">Experiencia</a></li>
@@ -559,8 +561,10 @@
 <div class="mobile-menu" id="mobileMenu">
   <div class="mobile-menu-inner">
     <div class="mobile-menu-logo">RÉ<span>ELS</span> Nails Co</div>
-    <a href="#políticas" onclick="closeMenu()">Políticas</a>
+   <a href="#políticas" onclick="closeMenu()">Políticas</a>
     <a href="#servicios" onclick="closeMenu()">Servicios</a>
+    <a href="#historia" onclick="closeMenu()">Mi Historia</a>
+    <a href="#reseñas" onclick="closeMenu()">Reseñas</a>
     <a href="#portafolio" onclick="closeMenu()">Portafolio</a>
     <a href="#combos" onclick="closeMenu()">Combos</a>
     <a href="#experiencia" onclick="closeMenu()">Sleep Spa VIP</a>
@@ -631,7 +635,7 @@
 </section>
 
 <!-- MI HISTORIA -->
-<section class="historia-seccion" style="padding: 7rem 2rem;">
+<section class="historia-seccion" id="historia" style="padding: 7rem 2rem;">
   <div class="container">
 
     <div class="reveal" style="text-align: center; margin-bottom: 4rem;">
@@ -700,6 +704,60 @@
 
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+ <!-- RESEÑAS -->
+<section id="reseñas" style="background: var(--dark2); padding: 7rem 2rem;">
+  <div class="container">
+    <p class="section-label reveal">Lo que dicen ellas</p>
+    <h2 class="section-title reveal">Reseñas <em>reales</em></h2>
+
+    <div class="reveal" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 3rem;">
+
+      <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(233,30,140,0.2); border-radius: 1.2rem; padding: 2rem;">
+        <div style="color: var(--pink); font-size: 1rem; margin-bottom: 1rem; letter-spacing: 0.1em;">★★★★★</div>
+        <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-style: italic; color: var(--white); line-height: 1.7; margin-bottom: 1.2rem;">"La mejor manicure que me he hecho en la vida. Johanna es super detallista y el resultado duró más de 3 semanas impecable."</p>
+        <div style="display: flex; align-items: center; gap: 0.8rem;">
+          <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(233,30,140,0.2); border: 1px solid rgba(233,30,140,0.4); display: flex; align-items: center; justify-content: center; font-size: 0.8rem; color: var(--pink); font-weight: 600;">S</div>
+          <div>
+            <p style="font-size: 0.85rem; font-weight: 500; color: var(--white);">Sara M.</p>
+            <p style="font-size: 0.72rem; color: var(--gray);">PolyGel Esculpido</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(233,30,140,0.2); border-radius: 1.2rem; padding: 2rem;">
+        <div style="color: var(--pink); font-size: 1rem; margin-bottom: 1rem; letter-spacing: 0.1em;">★★★★★</div>
+        <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-style: italic; color: var(--white); line-height: 1.7; margin-bottom: 1.2rem;">"El Sleep Spa VIP fue una experiencia increíble. Llegué estresada y salí renovada. El ambiente, la atención, todo perfecto."</p>
+        <div style="display: flex; align-items: center; gap: 0.8rem;">
+          <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(233,30,140,0.2); border: 1px solid rgba(233,30,140,0.4); display: flex; align-items: center; justify-content: center; font-size: 0.8rem; color: var(--pink); font-weight: 600;">V</div>
+          <div>
+            <p style="font-size: 0.85rem; font-weight: 500; color: var(--white);">Valentina R.</p>
+            <p style="font-size: 0.72rem; color: var(--gray);">Sleep Spa VIP</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(233,30,140,0.2); border-radius: 1.2rem; padding: 2rem;">
+        <div style="color: var(--pink); font-size: 1rem; margin-bottom: 1rem; letter-spacing: 0.1em;">★★★★★</div>
+        <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-style: italic; color: var(--white); line-height: 1.7; margin-bottom: 1.2rem;">"Fui por primera vez y ya no voy a otro lugar. La atención personalizada hace toda la diferencia. Me explicó todo lo que necesitaba."</p>
+        <div style="display: flex; align-items: center; gap: 0.8rem;">
+          <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(233,30,140,0.2); border: 1px solid rgba(233,30,140,0.4); display: flex; align-items: center; justify-content: center; font-size: 0.8rem; color: var(--pink); font-weight: 600;">C</div>
+          <div>
+            <p style="font-size: 0.85rem; font-weight: 500; color: var(--white);">Camila T.</p>
+            <p style="font-size: 0.72rem; color: var(--gray);">Réels Classic</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="reveal" style="text-align: center; margin-top: 2.5rem;">
+      <a href="https://wa.me/573166759654?text=Hola!%20Quiero%20reservar%20una%20cita%20en%20RÉELS%20💅" class="btn-primary">
+        💅 Quiero vivir esta experiencia
+      </a>
     </div>
   </div>
 </section>
